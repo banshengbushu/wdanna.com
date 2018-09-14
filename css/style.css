@@ -184,8 +184,9 @@ blockquote footer {
 	margin-bottom: 0
 }
 .container {
-  padding-right: 20px;
-  padding-left: 20px;
+	display: flex;
+	align-items: center;
+	padding: 10px;
 }
 @media (min-width: 768px) {
 	.container {
@@ -458,14 +459,14 @@ a.custom-button span {
 * Autohiding Navbar, (all pages)
 ******************************************************* */
 .logo {
-	position: absolute;
-	display: block;
-	top: 50%;
-	margin-top: -15px;
-	left: 30px;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	border-radius: 50%;
 }
 .logo img {
-	display:block;
+	display: block;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	-khtml-opacity: 1;
 	-moz-opacity: 1;
@@ -474,6 +475,9 @@ a.custom-button span {
 	-moz-transition: all ease .2s;
 	-o-transition: all ease .2s;
 	transition: all ease .2s;
+	width: auto;
+	height: 100%;
+	margin-left: -24%;
 }
 .logo img:hover {
 	display:block;

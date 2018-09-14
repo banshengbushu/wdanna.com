@@ -1,38 +1,126 @@
 ---
-title: Hello World
+title: 发现更大的世界 -知乎2018
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+>收录知乎发布的 2018 全新品牌视频「发现更大的世界」。
 
-## Quick Start
+**我们是从什么时候开始**
 
-### Create a new post
+**不再向世界抛出问题的？**
 
-``` bash
-$ hexo new "My New Post"
-```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
 
-### Run server
+像罐头里的沙丁鱼、保温杯里的白开水
 
-``` bash
-$ hexo server
-```
+在两点一线的日常里压缩、装罐、保持常温
 
-More info: [Server](https://hexo.io/docs/server.html)
+有些麻木、有点无趣
 
-### Generate static files
 
-``` bash
-$ hexo generate
-```
 
-More info: [Generating](https://hexo.io/docs/generating.html)
+为什么人容易在洗澡的时候思考人生？
 
-### Deploy to remote sites
+月薪 6000 如何平衡生活与兴趣的关系？
 
-``` bash
-$ hexo deploy
-```
+如果太阳熄灭，人类要如何生活？
 
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+
+我们曾对这个世界好奇过
+
+但最后又选择了接受规则
+
+
+
+思考人生，不如思考房价和婚期
+
+平衡生活与兴趣，不如平衡年龄与存款
+
+担忧人类的生活，不如先担忧自己的生存
+
+
+
+发现了吗？
+
+
+
+为什么充满灵性的是小孩？
+
+因为小孩对世界饱含着好奇与疑问
+
+为什么有的大人不再有趣？
+
+因为大人们相信既定的规则和所谓的标准答案
+
+他们追求「实用」
+
+而不再好奇「未知」、不再轻易「尝试」
+
+
+
+可这世界上
+
+时过境迁的从来都是「答案」
+
+历久弥新的永远都是「问题」
+
+我们对已知的天地了如指掌
+
+是否忘了也要对未知的世界怀抱想象？
+
+
+
+已知的太少，未知的太多
+
+越学习，世界的边界似乎逐渐在缩小
+
+但越好奇，世界的轮廓又的确在伸张
+
+
+
+成为一个有趣的大人一点儿也不难
+
+把「规则」与「标准」
+
+换成「好奇」与「热情」就好
+
+去无畏地保持疑问并直面问题就好
+
+去热情地拥抱世界且享受尝试就好
+
+
+
+毕竟
+
+每一个「大的世界」
+
+都是从一个「小的好奇」开始的
+
+
+
+更大的世界是什么？
+
+是未知
+
+是生活在已知的信息中
+
+被好奇驱动着去发现未知的一切
+
+
+
+更有趣的人是什么样的？
+
+是不满足于已有认知
+
+不禁锢于传统思维与观念
+
+对世界仍保持好奇与独立思考的「新知青年」
+
+
+
+
+希望我们
+
+都成为拥有好奇心与想象力的大人
+
+做独立思考与探索更多的新知青年
+
+成为不断发现更大世界的有趣人类

@@ -472,11 +472,11 @@ a.custom-button span {
 * Autohiding Navbar, (all pages)
 ******************************************************* */
 .logo {
-	position: absolute;
-	display: block;
-	top: 50%;
-	margin-top: -15px;
-	left: 30px;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	border-radius: 50%;
 }
 .logo img {
 	display:block;
@@ -488,6 +488,9 @@ a.custom-button span {
 	-moz-transition: all ease .2s;
 	-o-transition: all ease .2s;
 	transition: all ease .2s;
+	width: auto;
+	height: 100%;
+	margin-left: -24%;
 }
 .logo img:hover {
 	display:block;
@@ -1535,7 +1538,6 @@ hr.byline-accent {
 
 #statement p {
 	font-family: 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
-	font-style: italic;
 	font-size: 20px;
 	color: #333;
 }
