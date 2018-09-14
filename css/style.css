@@ -212,7 +212,7 @@ blockquote footer {
     margin-bottom: 0
 }
 
-.container {
+.container_header {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -570,6 +570,7 @@ a.custom-button span {
     width: 100%;
     text-align: center;
     height: 60px;
+    margin-left: 60%;
 }
 
 .navbar .nav > li {
