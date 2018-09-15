@@ -539,6 +539,16 @@ a.custom-button span {
     border-radius: 50%;
 }
 
+
+@media (max-width: 768px) {
+    .logo {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+}
+
+
 .logo img {
     display: block;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -696,9 +706,9 @@ nav i.icon-basic-eye {
         height: 60px;
     }
 
-    .navbar nav {
-        display: none
-    }
+    /*.navbar nav {*/
+        /*display: none*/
+    /*}*/
 }
 
 .grey-border {
