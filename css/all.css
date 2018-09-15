@@ -109,10 +109,10 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif, "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
     font-weight: 400;
-    font-weight: normal;
-    color: #151515;
+    font-weight: bold;
+    color: #333;;
 }
 
 h2 {
@@ -219,6 +219,7 @@ blockquote footer {
 }
 
 .animateme .backdrop {
+    padding: 30px;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     background: rgba(255, 255, 255, .5);
@@ -632,18 +633,31 @@ a.custom-button span {
 
 .navbar .nav > li > a {
     display: block;
-    padding: 0px 10px;
+    padding: 0px 20px;
     margin: 23px 0px;
     color: #151515;
+    font-size: 16px;
     font-family: 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 11px;
     font-weight: 400;
     line-height: 14px;
     text-shadow: none;
     border-right: 1px solid #aaa;
 }
+
+.navbar .nav li.nolink {
+    font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar .nav > li > a {
+        padding: 0px 10px;
+        font-size: 11px;
+    }
+}
+
 
 .navbar .nav li.nolink {
     font-family: 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
@@ -1020,7 +1034,7 @@ span.sb-caret { /* Caret Down */
 #hero p {
     color: #333;
     font-family: 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     display: inline-block;
 }
 
