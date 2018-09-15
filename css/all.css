@@ -218,6 +218,13 @@ blockquote footer {
     font-size: 12px;
 }
 
+.animateme .backdrop {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+}
+
 .table-responsive {
     margin: 40px 0;
 }
@@ -791,7 +798,6 @@ button.navbar-toggle {
         margin-top: 8px;
     }
 }
-
 
 .menu-icon .before, .menu-icon .main, .menu-icon .after {
     display: block;
