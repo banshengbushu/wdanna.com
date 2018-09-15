@@ -539,15 +539,17 @@ a.custom-button span {
     border-radius: 50%;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .logo {
         width: 40px;
         height: 40px;
         margin-left: 10px;
     }
-}
 
+    .navbar .nav li.nolink {
+        display: none;
+    }
+}
 
 .logo img {
     display: block;
@@ -581,7 +583,12 @@ a.custom-button span {
     width: 100%;
     text-align: center;
     height: 60px;
-    margin-left: 60%;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav {
+        margin-left: 10px;
+    }
 }
 
 .navbar .nav > li {
@@ -707,7 +714,7 @@ nav i.icon-basic-eye {
     }
 
     /*.navbar nav {*/
-        /*display: none*/
+    /*display: none*/
     /*}*/
 }
 
@@ -764,6 +771,13 @@ button.navbar-toggle {
     margin-bottom: 0;
     margin-right: 0;
 }
+
+@media (max-width: 767px) {
+    button.navbar-toggle {
+        margin-top: 8px;
+    }
+}
+
 
 .menu-icon .before, .menu-icon .main, .menu-icon .after {
     display: block;
