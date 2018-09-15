@@ -109,7 +109,7 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    font-family: "Comic Sans MS", cursive, sans-serif, "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
     font-weight: 400;
     font-weight: bold;
     color: #333;;
@@ -1033,6 +1033,10 @@ span.sb-caret { /* Caret Down */
 
 .backdrop p {
     font-family: 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+.backdrop h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif, "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #hero p {
