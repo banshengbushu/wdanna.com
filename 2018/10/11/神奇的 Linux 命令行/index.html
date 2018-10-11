@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>神奇的 Linux 命令行 | 半生不熟的个人网站 | 前端开发</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="半生不熟的个人网站 | 前端开发">
+    <meta name="author" content="Danna">
+    <meta name="description" content="我是半生不熟，喜欢照自己的怪念头行事，喜欢一切意外 想把生活过成诗的样子。<br/>若哪天有幸相遇，请别诧异，其实我并不是个乖孩子。" />
+    <meta name="keywords" content="半生不熟 前端 开发 Web" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/http://pfb4qt96x.bkt.clouddn.com/2018/9/22/logo_128x128.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="半生不熟的个人网站 | 前端开发" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container_header">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="http://pfb4qt96x.bkt.clouddn.com/logo.jpg" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">半生不熟的个人网站 | 前端开发</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/banshengbushu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/Dannaw_" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/wang.danna.3" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            
+                            <li><a href="https://weibo.com/3930468927/profile?topnav=1&wvr=6" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-10-11T08:11:32.000Z" itemprop="datePublished">
+          2018-10-11
+      </time>
+    
+</span>
+                <h1>神奇的 Linux 命令行</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>####1、命令行真的好吗<br><img src="http://upload-images.jianshu.io/upload_images/2190281-654d37c0cc309fba.jpg" alt="程序员的使命"></p>
+<ul>
+<li><strong>维基百科的解释</strong><blockquote>
+<p>命令行界面（英语：command-line interface，缩写：CLI）是在图形用户界面得到普及之前使用最为广泛的用户界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。也有人称之为字符用户界面（CUI）。</p>
+</blockquote>
+</li>
+<li><strong>也有人这样说</strong><blockquote>
+<p>熟练使用命令行是一种常常被忽视，或被认为难以掌握的技能，但实际上，它会提高你作为工程师的灵活性以及生产力</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p><strong>个人观点</strong><br>有看到不同行业的人在评论区各种互撕，那到底用命令行是好还是不好呢..其实我觉得有时候花时间纠结这些问题是没有意义的，你觉得有用就学，不看好它就不看了呗，等哪天你发现它的好了，打心里想学了就去学呗，学习这东西，只要你愿意开始，什么时候都不晚。<br>任何东西都没有绝对的说法，要看使用的场合，常说水能载舟，它亦能覆舟。<br>我自己会的命令行也不是很多，但真的打心里羡慕那些把命令行用的很溜的大牛们，也在学习着熟悉大部分命令行，因为我觉得至少现在对我来说，它是极好的。<br>你是否注意到，在电影中一个“超级黑客”坐在电脑前，从不摸一下鼠标， 就能够在30秒内侵入到超安全的军事计算机中。这是因为电影制片人意识到， 作为人类，本能地知道让计算机圆满完成工作的唯一途径，是用键盘来操纵计算机。<br><strong>但不得不说不好的地方是</strong></p>
+<ul>
+<li><p>命令行对新手不太友好，所以能否熟练应用命令行算是一个高手和新手能显著拉开效率差距的点。</p>
+</li>
+<li><p>娱乐的时候不友好，你要打游戏或者要聊天，这个时候就还是图形化界面占上风了，当然对用户来说也美观</p>
+</li>
+<li>看到有人这样说—我就想让照片上妹子脸上的小痘痘消失，怎么用命令行实现呢</li>
+</ul>
+<p><strong>好在哪</strong></p>
+<ul>
+<li>人生苦短，效率，效率，效率，还是效率</li>
+<li>鼠标不适合快速操作，命令行通常比在菜单中点来点去更简单，更容易，更直接。</li>
+<li>稳定,可移植性强</li>
+<li>开发省心省钱</li>
+</ul>
+</li>
+</ul>
+<p>###2、感受下效率<br>试着玩玩，就能体会到它的效率了</p>
+<table>
+<thead>
+<tr>
+<th>使用命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>poweroff</td>
+<td>立刻关机</td>
+</tr>
+<tr>
+<td>shutdown -h 10</td>
+<td>10分钟后自动关机</td>
+</tr>
+<tr>
+<td>reboot</td>
+<td>重启</td>
+</tr>
+<tr>
+<td>shutdown -r 10（20:35）</td>
+<td>过10分钟（在时间为20:35）自动重启(root用户使用)</td>
+</tr>
+<tr>
+<td>ls</td>
+<td>列举出当前工作目录的文件和文件夹</td>
+</tr>
+<tr>
+<td>mkdir <new-directory-name></new-directory-name></td>
+<td>新建一个文件夹</td>
+</tr>
+<tr>
+<td>touch <new-directory-name></new-directory-name></td>
+<td>新建一个文件</td>
+</tr>
+<tr>
+<td>rm <file-name></file-name></td>
+<td>删除给定的文件或文件夹</td>
+</tr>
+<tr>
+<td>cp <source-file> <destination-file></destination-file></source-file></td>
+<td>对文件或文件夹进行复制</td>
+</tr>
+<tr>
+<td>cat <file></file></td>
+<td>用于在标准输出（监控器或屏幕）上查看文件内容</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>显示当前工作目录</td>
+</tr>
+</tbody>
+</table>
+<p>###3、基本命令行<br>|使用命令|用途|<br>|————|——-|<br>|  sudo passwd root |   设置root密码（输入当前系统账户的密码并设置新的UNIX密码 |<br>|users| 显示当前登录系统地用户|<br>|who| 登录在本机的用户与来源|<br>|hostname| 查看主机名<br>|man <command-name>|会为给定的命令显示一个使用手册页面|<br>|tail -n N <file-name>|指定在标准输出上显示文件的最后N行内容（默认显示10行）|<br>|grep “<string>“ <file-name>|在给定的文件中搜寻指定的字符串|<br>|tar xvf FileName.tar|解包|<br>|tar cvf FileName.tar DirName|打包文件|<br>|gzip -d FileName.gz|解压|<br>|gzip FileName|压缩|<br>|which &lt;file_name&gt; | 查看可执行文件的位置，在PATH变量指定的路径中查看系统命令是否存在及其位置</file-name></string></file-name></command-name></p>
+<p>####4、这些你也要会（举例说明）<br>|使用命令|用途|<br>|————|——-|<br>|<figure class="highlight plain"><figcaption><span>cat >></span><a href="/Documents/test.txt"><<  "EOF"export PATH</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">|tree #使用`sudo apt-get install tree`安装|将文件目录以树状形式查看，有时候很方便|</span><br><span class="line">|echo  &quot;line 1\nline 1&quot; |   显示`line 1\nline 1`|</span><br><span class="line">|echo -e &quot;line 1\nline 2&quot; |   显示`line 1(换行了)line 2`（-e：遇到转义字符特殊处理）|</span><br><span class="line">|ps -aux | 显示所有进程状态|</span><br><span class="line">|kill &lt;进程号(就是ps -A中的第一列的数字)&gt;|终止一个进程|</span><br><span class="line">|kill -9 &lt;进程号&gt;|强制中止一个进程(在上面进程中止不成功的时候使用)|</span><br><span class="line">|netstat -tp  |查看网络连接命令|</span><br><span class="line">|service --status-all  |查看系统服务状态|</span><br><span class="line">|whereis &lt;安装的应用名称&gt;  |查找应用位置</span><br><span class="line">####5神奇的`top`</span><br><span class="line">**这里选择把top单独介绍（信息量略大）**</span><br><span class="line">* `top`的用途—作为日常管理工作中最常用也是最重要的Linux 系统监控工具之一，可以动态观察系统进程状况，显示当前系统正在执行的进程的相关信息，包括进程ID、内存占用率、CPU占用率等默认值是每5秒更新一次，按q键可以退出。</span><br><span class="line">* 在你的终端输入这条命令即可查看</span><br></pre></td></tr></table></figure></p>
+<p>$ top<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 它会出现这些信息（本人电脑举例）</span><br></pre></td></tr></table></figure></p>
+<p>top - 21:11:46 up 29 min,  2 users,  load average: 0.29, 0.28, 0.18<br>Tasks: 240 total,   1 running, 239 sleeping,   0 stopped,   0 zombie<br>%Cpu(s):  2.6 us,  0.8 sy,  0.0 ni, 96.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st<br>KiB Mem :  8081084 total,  4966452 free,  1533752 used,  1580880 buff/cache<br>KiB Swap:        0 total,        0 free,        0 used.  5930172 avail Mem </p>
+<p>  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND<br>  979 root      20   0  370140  45300  33148 S   4.6  0.6   0:56.69 Xorg<br> 3473 wangdan+  20   0  643452  53564  31976 S   3.3  0.7   0:01.12 python2<br> 2067 wangdan+  20   0 1233768 113492  65108 S   2.3  1.4   1:06.83 compiz<br>  769 mongodb   20   0  552156  67876  33636 S   0.7  0.8   0:12.55 mongod<br> 2466 wangdan+  20   0 1122656 213372 122840 S   0.7  2.6   1:42.89 chrome<br> 3509 wangdan+  20   0   49044   4240   3516 R   0.7  0.1   0:00.52 top<br> 3552 wangdan+  20   0  924300 189484  82964 S   0.7  2.3   0:04.20 chrome<br> 1680 wangdan+  20   0  578900 101304  46068 S   0.3  1.3   0:03.93 fcitx<br> 1905 wangdan+  20   0  206868   6532   5900 S   0.3  0.1   0:00.23 at-spi2-registr<br> 2097 wangdan+  20   0  469672  14668  11180 S   0.3  0.2   0:00.33 indicator-appli<br> 2398 wangdan+  20   0 3091788  80880  49128 S   0.3  1.0   0:03.90 sogou-qimpanel<br> 3141 root      20   0       0      0      0 S   0.3  0.0   0:00.24 kworker/u8:2<br> 3581 wangdan+  20   0  531268  52284  28648 S   0.3  0.6   0:00.12 chrome<br>    1 root      20   0  185468   6144   4020 S   0.0  0.1   0:02.98 systemd<br>    2 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kthreadd<br>    3 root      20   0       0      0      0 S   0.0  0.0   0:00.02 ksoftirqd/0<br>    5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0H<br>    6 root      20   0       0      0      0 S   0.0  0.0   0:01.88 kworker/u8:0<br>    7 root      20   0       0      0      0 S   0.0  0.0   0:01.92 rcu_sched<br>    8 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh<br>    9 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/0<br>   10 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/0<br>   11 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/1<br>   12 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/1<br>   13 root      20   0       0      0      0 S   0.0  0.0   0:00.02 ksoftirqd/1<br>   14 root      20   0       0      0      0 S   0.0  0.0   0:00.01 kworker/1:0<br>   15 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/1:0H<br>   16 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/2<br>   17 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/2<br>   18 root      20   0       0      0      0 S   0.0  0.0   0:00.06 ksoftirqd/2<br>   20 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/2:0H<br>   21 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/3<br>   22 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/3<br>   23 root      20   0       0      0      0 S   0.0  0.0   0:00.01 ksoftirqd/3<br>   25 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/3:0H<br>   26 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kdevtmpfs<br><code>`</code></p>
+<ul>
+<li>第一行含义解释<ul>
+<li><code>21:11:46</code>—当前系统时间</li>
+<li><code>up 29 min</code>—系统已经运行了29分钟（在这期间系统没有重启过）</li>
+<li><code>2users</code>—当前有2个用户登录系统</li>
+<li><code>load average: 0.29, 0.28, 0.18—loadaverage</code>—后面的三个数分别是1分钟、5分钟、15分钟的负载情况</li>
+<li><code>loadaverage</code>—数据是每隔5秒钟检查一次活跃的进程数，然后按特定算法计算出的数值。如果这个数除以逻辑CPU的数量，结果高于5的时候就表明系统在超负荷运转了</li>
+</ul>
+</li>
+<li>第二行含义解释<ul>
+<li><code>Tasks: 240 total,   1 running, 239 sleeping,   0 stopped,   0 zombie</code>—系统现在共有240个进程，其中处于运行中的有1个，239个在休眠（sleep），stoped状态的有0个，zombie状态（僵尸）的有0个。</li>
+</ul>
+</li>
+<li>第三行含义解释<ul>
+<li><code>2.6 us</code>—用户空间占用CPU的百分比。 </li>
+<li><code>0.8 sy</code>—内核空间占用CPU的百分比。</li>
+<li><code>0.0%ni</code>—改变过优先级的进程占用CPU的百分比</li>
+<li><code>96.6 id</code>—空闲CPU百分比</li>
+<li><code>0.0 wa</code>—IO等待占用CPU的百分比</li>
+<li><code>0.0hi</code>—硬中断（HardwareIRQ）占用CPU的百分比</li>
+<li><code>0.0si</code>—软中断（SoftwareInterrupts）占用CPU的百分比`</li>
+</ul>
+</li>
+<li>第四行含义解释<ul>
+<li><code>8081084 total</code>—物理内存总量（80GB）</li>
+<li><code>1533752 used</code>—使用中的内存总量（14GB）</li>
+<li><code>4966452 free</code>—空闲内存总量（49GB）</li>
+<li><code>1580880 buff/cache</code>—缓存的内存量（15G）</li>
+</ul>
+</li>
+<li>第五行含义解释(swap交换分区信息)<ul>
+<li><code>0 total</code>—交换区总量（0K）</li>
+<li><code>0used</code>—使用的交换区总量（0K）</li>
+<li><code>0free</code>—空闲交换区总量（0K）</li>
+<li><code>5930172 avail Mem</code>—可用内存（59G）</li>
+</ul>
+</li>
+<li>第七行含义解释（各进程（任务）的状态监控）<ul>
+<li><code>PID</code>—进程id</li>
+<li><code>USER</code>—进程所有者</li>
+<li><code>PR</code>—进程优先级</li>
+<li><code>NI</code>—nice值。负值表示高优先级，正值表示低优先级</li>
+<li><code>VIRT</code>—进程使用的虚拟内存总量，单位kb。VIRT=SWAP+RES</li>
+<li><code>RES</code>—进程使用的、未被换出的物理内存大小，单位kb。RES=CODE+DATA</li>
+<li><code>SHR</code>—共享内存大小，单位kb</li>
+<li><code>S</code>—进程状态。D=不可中断的睡眠状态R=运行S=睡眠T=跟踪/停止Z=僵尸进程</li>
+<li><code>%CPU</code>—上次更新到现在的CPU时间占用百分比</li>
+<li><code>%MEM</code>—进程使用的物理内存百分比</li>
+<li><code>TIME+</code>—进程使用的CPU时间总计，单位1/100秒</li>
+<li><code>COMMAND</code>—进程名称（命令名/命令行）</li>
+</ul>
+</li>
+</ul>
+<p>####6、参考（来自<a href="https://bbs.excellence-girls.org/topic/213/markdown" target="_blank" rel="noopener">卓越女生BBS总理的分享</a>）</p>
+<ul>
+<li><a href="https://github.com/iamcoach/console/blob/master/COMMANDS.md" target="_blank" rel="noopener">常用命令行介绍</a></li>
+<li><a href="https://bbs.excellence-girls.org/topic/167" target="_blank" rel="noopener">常用命令行cheet sheet</a></li>
+<li><a href="http://www.imooc.com/article/1276" target="_blank" rel="noopener">每个程序员都应该知道的8个Linux命令</a></li>
+<li><a href="http://www.imooc.com/article/1285" target="_blank" rel="noopener">29个你必须知道的Linux命令</a></li>
+<li><a href="http://www.imooc.com/article/1316" target="_blank" rel="noopener">Linux mkdir、tar 和 kill 命令的 4 个有用小技巧</a></li>
+<li><a href="http://www.imooc.com/learn/175" target="_blank" rel="noopener">慕课网 《Linux达人养成计划 I》</a></li>
+<li><a href="http://www.imooc.com/learn/111" target="_blank" rel="noopener">慕课网 《Linux达人养成计划 II》</a></li>
+<li><a href="http://wiki.ubuntu.org.cn/UbuntuSkills" target="_blank" rel="noopener">Ubuntu各种技巧</a></li>
+<li><a href="http://teliute.org/linux/Tecli/" target="_blank" rel="noopener">Ubuntu常用命令行教程</a></li>
+<li><a href="https://book.douban.com/subject/4889838/" target="_blank" rel="noopener">书籍《鸟哥的Linux私房菜》</a></li>
+</ul>
+<p><strong>我是半生不熟 喜欢照自己的怪念头行事<br>喜欢一切意外 想把生活过成诗的样子<br>若哪天有幸相遇 请别诧异 其实我并不是个乖孩子</strong></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/10/11/究竟要不要分组，我们讨论了两周/" style="float: left;">
+        ← 究竟要不要分组，我们讨论了两周
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/10/11/盲打那些事儿/">
+        盲打那些事儿 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Danna. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="http://wdanna.com/" style="color: #767D84">Danna</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/banshengbushu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/Dannaw_" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/wang.danna.3" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    <li><a href="https://weibo.com/3930468927/profile?topnav=1&wvr=6" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

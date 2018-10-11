@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>思沃学院一期考试系统环境配置 | 半生不熟的个人网站 | 前端开发</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="半生不熟的个人网站 | 前端开发">
+    <meta name="author" content="Danna">
+    <meta name="description" content="我是半生不熟，喜欢照自己的怪念头行事，喜欢一切意外 想把生活过成诗的样子。<br/>若哪天有幸相遇，请别诧异，其实我并不是个乖孩子。" />
+    <meta name="keywords" content="半生不熟 前端 开发 Web" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/http://pfb4qt96x.bkt.clouddn.com/2018/9/22/logo_128x128.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="半生不熟的个人网站 | 前端开发" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container_header">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="http://pfb4qt96x.bkt.clouddn.com/logo.jpg" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">半生不熟的个人网站 | 前端开发</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/banshengbushu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/Dannaw_" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/wang.danna.3" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            
+                            <li><a href="https://weibo.com/3930468927/profile?topnav=1&wvr=6" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-10-11T08:07:10.000Z" itemprop="datePublished">
+          2018-10-11
+      </time>
+    
+</span>
+                <h1>思沃学院一期考试系统环境配置</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>###安装Docker</p>
+<ul>
+<li>按照Docker官网的步骤执行（要注意自己系统的版本号）<br><a href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener">https://docs.docker.com/compose/install/</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello from Docker！</span><br><span class="line">#安装成功后看到这句即可</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>###安装Docker-compose</p>
+<ul>
+<li><p>命令行如下顺序执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker-compose --version</span><br><span class="line">docker-compose version: 1.8.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行这几行命令，使用 Docker时 不用加<code>sudo</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo groupadd docker</span><br><span class="line">#将当前用户加入docker组</span><br><span class="line">$ sudo gpasswd -a $&#123;USER&#125; docker</span><br><span class="line">$ sudo service docker restart</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>###克隆一期源码</p>
+<ul>
+<li>选择好目录执行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@github.com:thoughtworks-academy/recruiting-system.git</span><br><span class="line">$ git submodule init</span><br><span class="line">$ git submodule update</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>###开始环境配置</p>
+<ul>
+<li><p>打开hosts文件，单独一行添加<br><code>127.0.0.1 local.twars</code></p>
+</li>
+<li><p>进入assembly，按顺序执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker-compose up -d mysql</span><br><span class="line">assembly_mysql_1 is up-to-date</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> $ docker ps</span><br><span class="line">#查看当前运行的容器，出现mysql:5.7即可</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES</span><br><span class="line">6827bb303f9e        mysql:5.7           &quot;/entrypoint.sh mysql&quot;   19 hours ago        Up About an hour    0.0.0.0:3306-&gt;3306/tcp   assembly_mysql_1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ ./twars.sh</span><br><span class="line">========= TWARS ===========</span><br><span class="line"></span><br><span class="line">  0--0^^^^^^^^^^^^\________</span><br><span class="line">  \__/||-------||---------~</span><br><span class="line">        ``        ``</span><br><span class="line"></span><br><span class="line">- 用法：(jk|rjk|bkjk|my|rs)</span><br><span class="line">command：</span><br><span class="line">jk 初始化jenkins</span><br><span class="line">rjk 更新jenkins</span><br><span class="line">my 初始化数据库和用户</span><br><span class="line">rs 重启所有服务</span><br><span class="line">bkjk 备份jenkins</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ls</span><br><span class="line">#查看数据库的初始化文件</span><br><span class="line">assemble.sh*  conf/               docker-compose-prod.yml  logo            nginx/   production.env  remote_script  twars-jenkins/</span><br><span class="line">ci/           deploy-jenkins.sh*  docker-compose.yml       mysql-init.sql  nodejs/  readme.md       test.env       twars.sh*</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> $ ./twars.sh my</span><br><span class="line">#输入密码`&quot;thoughtworks&quot;`初始化数据库和用户</span><br><span class="line"> the password of root:</span><br><span class="line">|</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进入paper-api下按顺序执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./gradlew tasks</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>到这步你就可以去吃个饭了，因为不是一般的慢<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./gradlew flywaymigrate</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br></pre></td></tr></table></figure>
+<p>再次查看当前运行哪些容器，至少应该有<code>mysql</code><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker exec -it `容器名/ID` bash</span><br><span class="line">#此时的容器名应是 assembly_mysql_1</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -u root -pthoughtworks</span><br><span class="line">mysql: [Warning] Using a password on the command line interface can be insecure.</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 19</span><br><span class="line">Server version: 5.7.11 MySQL Community Server (GPL)</span><br><span class="line">Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line">Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.</span><br><span class="line">mysql&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ show databases;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| BronzeSword        |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">+--------------------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ use BronzeSword</span><br><span class="line">Reading table information for completion of table and column names</span><br><span class="line">You can turn off this feature to get a quicker startup with -A</span><br><span class="line">Database changed</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ show tables;</span><br><span class="line">+------------------------+</span><br><span class="line">| Tables_in_BronzeSword  |</span><br><span class="line">+------------------------+</span><br><span class="line">| blankQuiz              |</span><br><span class="line">| blankQuizSubmit        |</span><br><span class="line">| homeworkPostHistory    |</span><br><span class="line">| homeworkQuiz           |</span><br><span class="line">| homeworkSubmit         |</span><br><span class="line">| itemPost               |</span><br><span class="line">| loginDetail            |</span><br><span class="line">| paper                  |</span><br><span class="line">| passwordRetrieveDetail |</span><br><span class="line">| quizItem               |</span><br><span class="line">| schema_version         |</span><br><span class="line">| scoreSheet             |</span><br><span class="line">| section                |</span><br><span class="line">| sectionQuiz            |</span><br><span class="line">| thirdParty             |</span><br><span class="line">| userDetail             |</span><br><span class="line">| users                  |</span><br><span class="line">+------------------------+</span><br><span class="line">17 rows in set (0.01 sec)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ exit</span><br><span class="line">#退出mysql</span><br></pre></td></tr></table></figure>
+<ul>
+<li>再次进入assembly下按顺序执行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./twars.sh rs</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果提示说没有权限那就加上<code>sudo</code>,然后就又可以去吃顿饭了</p>
+<ul>
+<li>执行成功后访问<code>localhost:8888</code>,可看到登录页面，但没有验证码,如下图</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-571aa5ed07f222dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="初期图"></p>
+<ul>
+<li>切换到web-api下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gedit app.js</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>用<code>//</code>注释这两行内容<br><code>var captcha = require(&#39;./middleware/captcha&#39;);</code><br><code>app.use(captcha(params));</code></p>
+<ul>
+<li><p>切换到assembly下继续执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker-compose up -d</span><br><span class="line">assembly_mongo_1 is up-to-date</span><br><span class="line">assembly_mysql_1 is up-to-date</span><br><span class="line">assembly_ambassador_1 is up-to-date</span><br><span class="line">assembly_paper-api_1 is up-to-date</span><br><span class="line">assembly_jenkins_1 is up-to-date</span><br><span class="line">assembly_nginx_1 is up-to-date</span><br><span class="line">Starting assembly_web-api_1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换web-api下执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换到assembly下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -a</span><br><span class="line">#查看隐藏的没有启动起来的容器</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker exec -it assembly_web-api_1 bash</span><br><span class="line">root@ac59478f305a:/#</span><br><span class="line">#输入 cd /var/app/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall canvas</span><br><span class="line">npm info it worked if it ends with ok</span><br><span class="line">npm info using npm@3.7.3</span><br><span class="line">npm info using node@v5.8.0</span><br><span class="line">npm info ok</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install canvas</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Ctral+d</span><br><span class="line">#退出</span><br></pre></td></tr></table></figure>
+<ul>
+<li>取消之前在<code>web-api/app.js</code>中注释掉的两行</li>
+<li>切换至assembly下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line">#查看node : 5.8 是否是 up</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果是<code>up</code> 则执行这行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker-compose kill web-api</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker-compose up -d</span><br></pre></td></tr></table></figure>
+<ul>
+<li>再次访问<code>localhost:8888</code>,看到验证码出现即成功，如下图</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-3798177e35fa04bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="配置成功后的图"><br>你会发现注册会显示错误，接着执行一下步骤</p>
+<ul>
+<li>切换至web-api下,顺序执行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line">$ docker exec -it &apos;mongo容器名/ID&apos; bash</span><br><span class="line">$ mongo</span><br><span class="line">$ show dbs</span><br><span class="line">$ use twars</span><br><span class="line">$ db.createCollection(&apos;configurations&apos;);</span><br><span class="line">$ db.configurations.insert(&#123;&quot;registerable&quot;:true,&quot;qaContent&quot;:&quot;&quot;&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>注册成功会后即可跳转至个人中心界面</p>
+<ul>
+<li>修复不能显示图片的问题<br>修改<code>recruiting-system/web-api/config/config.yml</code>里面的test属性的值为<code>127.0.0.1</code><blockquote>
+<p>staticFileServer: ‘<a href="http://127.0.0.1:8888/fs/&#39;" target="_blank" rel="noopener">http://127.0.0.1:8888/fs/&#39;</a></p>
+</blockquote>
+</li>
+<li>切换到assembly<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker-compose kill web-api</span><br><span class="line">$ docker-compose up -d</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>即可看到成功加载出来的图片</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-55e9a99933737dfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片加载成功"></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/10/11/想不清楚，就先试试看吧/" style="float: left;">
+        ← 想不清楚，就先试试看吧
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/10/11/如果心甘情愿才叫写作，我愿为它找一万个理由/">
+        如果心甘情愿才叫写作，我愿为它找一万个理由 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Danna. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="http://wdanna.com/" style="color: #767D84">Danna</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/banshengbushu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/Dannaw_" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/wang.danna.3" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    <li><a href="https://weibo.com/3930468927/profile?topnav=1&wvr=6" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
