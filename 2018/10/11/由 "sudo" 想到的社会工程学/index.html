@@ -164,7 +164,7 @@
 </blockquote>
 <p>1、先不说这个会造成多大的安全性问题，从老师的话中，我想到一个一直在使用的命令但从来没有想过原因的问题—<strong>执行<code>apt-get</code>为什么一定要加<code>sudo</code></strong></p>
 <p>2、安全性指的是什么，社会工程学的手法又是什么</p>
-<p>3、试了试 不加<code>sudo</code>是这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get install skype</span><br><span class="line">E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)</span><br><span class="line">E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?</span><br></pre></td></tr></table></figure></p>
+<p>3、试了试 不加<code>sudo</code>是这样的<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get install skype</span><br><span class="line"><span class="symbol">E:</span> Could not open lock file /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">lock</span> - <span class="title">open</span> (13: <span class="title">Permission</span> <span class="title">denied</span>)</span></span><br><span class="line"><span class="symbol">E:</span> Unable to lock the administration directory (<span class="regexp">/var/lib</span><span class="regexp">/dpkg/</span>), are you root?</span><br></pre></td></tr></table></figure></p>
 <h3 id="为什么一定要加sudo"><a href="#为什么一定要加sudo" class="headerlink" title="为什么一定要加sudo"></a>为什么一定要加sudo</h3><ul>
 <li>使用包管理器<code>apt get</code>是要往<code>root</code>用户下装内容，所以要加<code>sudo</code>执行</li>
 <li><code>sudo</code>在英语里的意思是switch user and do something，在Linux系统上，你需要root权限来安装和卸载软件包</li>
@@ -199,13 +199,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/10/11/独上高楼，望尽天涯路 | 《如何阅读一本书》/" style="float: left;">
-        ← 独上高楼，望尽天涯路 | 《如何阅读一本书》
+    <a class="pull-left" href="/2018/10/11/盲打那些事儿/" style="float: left;">
+        ← 盲打那些事儿
     </a>
     
     
-    <a class="pull-right" href="/2018/10/11/每个程序员都有一个博客梦/">
-        每个程序员都有一个博客梦 →
+    <a class="pull-right" href="/2018/10/11/《假面饭店》|| 我认识了东野圭吾/">
+        《假面饭店》|| 我认识了东野圭吾 →
     </a>
     
 </nav>

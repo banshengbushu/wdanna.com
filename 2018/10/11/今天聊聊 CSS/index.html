@@ -222,18 +222,18 @@
 <p>###4、基本选择器<br><code>CSS</code>是一种用于屏幕上渲染<code>html</code>，<code>xml</code>等一种语言，<code>CSS</code>主要是在相应的元素中应用样式，来渲染相对应用的元素，那么这样我们选择相应的元素就很重要了，如何选择对应的元素，此时就需要我们所说的选择器。选择器主要是用来确定<code>html</code>的树形结构中的<code>DOM</code>元素节点。</p>
 <ul>
 <li><p><strong>元素选择器</strong>—如果设置 HTML 的样式，选择器通常将是某个<code>html</code> 元素，比如 <code>&lt;p&gt;</code>、<code>&lt;h1&gt;</code>、<code>&lt;em&gt;</code>、<code>&lt;a&gt;</code>，甚至可以是 <code>html</code> 本身：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;color:blue;&#125;</span><br><span class="line">p &#123;color:silver;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;<span class="attribute">color</span>:blue;&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>:silver;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>类选择器</strong>—为了将类选择器的样式与元素关联，必须将 <code>class</code>指定为一个适当的值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 class=&quot;important&quot;&gt;This heading is very important.&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 <span class="keyword">class</span>=<span class="string">"important"</span>&gt;This heading <span class="keyword">is</span> very important.&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.important &#123;color:red;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.important</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><strong> id选择器</strong>—选择器可以为标有特定 id 的 HTML 元素指定特定的样式，选择器以 “#” 来定义<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=&quot;red&quot;&gt;这个段落是红色。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<li><strong> id选择器</strong>—选择器可以为标有特定 id 的 HTML 元素指定特定的样式，选择器以 “#” 来定义<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"red"</span>&gt;</span>这个段落是红色。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#red &#123;color:red;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#red</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br></pre></td></tr></table></figure>
 <p>###5、伪元素<br>伪元素用于创建一些不在文档树中的元素，并为其添加样式。比如说，我们可以通过<code>:before</code>来在一个元素前增加一些文本，并为这些文本添加样式。虽然用户可以看到这些文本，但是这些文本实际上不在文档树中。</p>
 <ul>
 <li><p>伪元素包括这些</p>
@@ -247,10 +247,10 @@
 </ul>
 </li>
 <li><p>举个栗子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HTML:</span><br><span class="line">&lt;p&gt;Hello World, and wish you have a good day!&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">HTML:</span></span><br><span class="line"><span class="params">&lt;p&gt;</span>Hello World, and wish you have a good day!<span class="params">&lt;/p&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CSS:</span><br><span class="line">p:first-letter &#123;</span><br><span class="line">    font-size: 5em;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">CSS</span>:</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:first-letter</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">5em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果不创建一个<code>&lt;span&gt;</code>元素，我们可以通过设置<code>&lt;p&gt;</code>的<code>:first-letter</code>伪元素来为其添加样式。这个时候，看起来好像是创建了一个虚拟的<code>&lt;span&gt;</code>元素并添加了样式，但实际上文档树中并不存在这个<code>&lt;span&gt;</code>元素</p>
 <p>###6、完成一个需求</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-62cafcb9ac5fd8fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="用CSS实现这个效果"></p>

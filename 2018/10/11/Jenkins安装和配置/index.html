@@ -170,19 +170,19 @@
 <p>##二、安装（ubuntu16.04）<br><em><code>Jenkins</code>是开源的,使用<code>Java</code>编写的持续集成的工具</em><br>首先需要先安装<code>Java</code>，再执行以下步骤</p>
 <ul>
 <li><p>添加LTS版本PPA</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | sudo apt-key add -</span><br><span class="line">$ sudo sh -c &apos;echo deb http://pkg.jenkins-ci.org/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list&apos;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | sudo apt-key add -</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo sh -c <span class="string">'echo deb http://pkg.jenkins-ci.org/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list'</span></span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>更新源并安装Jenkins</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install jenkins</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="builtin-name">get</span> update</span><br><span class="line">$ sudo apt-<span class="builtin-name">get</span> install jenkins</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>安装后，Jenkins默认在8080端口上启动，如果8080被用，可以配置其他，比如配置为8088</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">编辑 /etc/default/jenkins  并更新HTTP_PORT到8088。</span><br><span class="line"></span><br><span class="line"> HTTP_PORT=8088</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">编辑 /etc/<span class="section">default</span>/jenkins  并更新HTTP_PORT到<span class="number">8088</span>。</span><br><span class="line"></span><br><span class="line"> HTTP_PORT=<span class="number">8088</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>启动<code>Jenkins</code>服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service jenkins start</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo<span class="built_in"> service </span>jenkins start</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>关闭<code>Jenkins</code>服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service jenkins stop</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo<span class="built_in"> service </span>jenkins stop</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>这时已经安装成功，可以在浏览器访问<code>localhost:8088</code></p>

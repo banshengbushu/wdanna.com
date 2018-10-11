@@ -206,8 +206,8 @@
 <li>编程环境友好，不需要像windows那样配置复杂的编程环境</li>
 </ul>
 <p>###4、安装Ubuntu<br>你可以戳<a href="http://www.jianshu.com/p/2eebd6ad284d" target="_blank" rel="noopener">这里</a>，很详细的教程，建议新手可以先安装windows+ubuntu双系统。</p>
-<p>###5、常用快捷键<br>安装好了吗，来个彩蛋，在你的终端输入一条有意思的命令，大家可在评论区贴出来呦，看看你平时都喜欢干什么～<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ history | awk &apos;&#123;print $2&#125;&apos; | sort | uniq -c | sort -rm | head -10</span><br></pre></td></tr></table></figure></p>
-<p>因为重新装过一次系统，我的是酱紫哒，统计了你使用过的命令的频率<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">2 ^[[200~docker</span><br><span class="line">     1 bahs</span><br><span class="line">     7 bash</span><br><span class="line">     1 cat</span><br><span class="line">   137 cd</span><br><span class="line">     1 CD</span><br><span class="line">     1 chmod</span><br><span class="line">     1 chsh</span><br><span class="line">     1 clear</span><br><span class="line">     1 cnpm</span><br></pre></td></tr></table></figure></p>
+<p>###5、常用快捷键<br>安装好了吗，来个彩蛋，在你的终端输入一条有意思的命令，大家可在评论区贴出来呦，看看你平时都喜欢干什么～<br><figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ history | <span class="type">awk</span> '&#123;print $<span class="number">2</span>&#125;' | <span class="type">sort</span> | <span class="type">uniq</span> -c | <span class="type">sort</span> -rm | <span class="type">head</span> <span class="number">-10</span></span><br></pre></td></tr></table></figure></p>
+<p>因为重新装过一次系统，我的是酱紫哒，统计了你使用过的命令的频率<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span> ^[[<span class="number">200</span>~docker</span><br><span class="line">     <span class="number">1</span> bahs</span><br><span class="line">     <span class="number">7</span> bash</span><br><span class="line">     <span class="number">1</span> cat</span><br><span class="line">   <span class="number">137</span> cd</span><br><span class="line">     <span class="number">1</span> CD</span><br><span class="line">     <span class="number">1</span> chmod</span><br><span class="line">     <span class="number">1</span> chsh</span><br><span class="line">     <span class="number">1</span> clear</span><br><span class="line">     <span class="number">1</span> cnpm</span><br></pre></td></tr></table></figure></p>
 <p>这些基本的你要会用哦…</p>
 <ul>
 <li>Ctrl-U: 擦除一行光标前面的部分。</li>
@@ -232,13 +232,13 @@
 </ul>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-b7734e4c3b64368e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="张这样子"></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-4f90b9e1039f685d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谐音—挂科，哈哈"><br>  1、安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:webupd8team/unstable</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install guake</span><br></pre></td></tr></table></figure>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo<span class="built_in"> add-apt-repository </span>ppa:webupd8team/unstable</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install guake</span><br></pre></td></tr></table></figure>
 <p>2、设置guake为默认的terminal：<br><code>$ sudo update-alternatives --config x-terminal-emulator</code><br>3、然后输入guake所在的序号</p>
 <ul>
 <li><a href="http://ohmyz.sh/" target="_blank" rel="noopener">zsh</a>—有强大的自动补全功能，能自动补全命令、参数、文件名、进程、用户名、变量、权限符等，使用Git开发，可以清楚地看到分支，方便的不是一点点</li>
 </ul>
-<p>1、安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install zsh git wget</span><br><span class="line">$ wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</span><br></pre></td></tr></table></figure></p>
-<p>2、替换bash为zsh：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ chsh -s /bin/zsh</span><br></pre></td></tr></table></figure></p>
+<p>1、安装<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="built_in">get</span> install zsh git wget</span><br><span class="line">$ wget --<span class="keyword">no</span>-check-certificate http<span class="variable">s:</span>//github.<span class="keyword">com</span>/robbyrussell/oh-my-zsh/raw/master/tools/install.<span class="keyword">sh</span> -O - | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure></p>
+<p>2、替换bash为zsh：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> chsh -s /bin/zsh</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="7、常用工具推荐"><a href="#7、常用工具推荐" class="headerlink" title="7、常用工具推荐"></a>7、常用工具推荐</h3><ul>
 <li><a href="https://github.com/ZQiang94/ubuntu-QQ" target="_blank" rel="noopener">QQ</a> —功能还是比较齐全的，基本相当于Windows下QQ2013的功能了。QQ对话气泡、传文件、远程协助、群聊、讨论组、视频和语音通话都是有的，体验还是比较好的</li>
 <li><a href="https://wx.qq.com/" target="_blank" rel="noopener">微信网页版</a>—基本功能全，跟windows差不多</li>
@@ -255,10 +255,10 @@
 </ul>
 <h3 id="8、程序员必备"><a href="#8、程序员必备" class="headerlink" title="8、程序员必备"></a>8、程序员必备</h3><ul>
 <li><p><code>cURL</code> 是一个强大的命令行 HTTP 工具，未来很多软件的快速在线安装都会用到。<br>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install curl</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt <span class="keyword">update</span></span><br><span class="line">sudo apt <span class="keyword">install</span> curl</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>zeal</code> 是一款 Linux 下强大的离线开发文档查看工具，它参照了 OS X 操作系统上收费、强大且几乎程序员必备的 Dash，并且与其共用离线文档。<br>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install zeal</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt <span class="keyword">update</span></span><br><span class="line">sudo apt <span class="keyword">install</span> zeal</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>XMind</code>是当前最为流行且强大的跨平台思维导图工具，学习和工作中不可或缺。</p>
 <p>下载 64 位 deb 安装包 <a href="http://www.xmind.net/download/linux/" target="_blank" rel="noopener">http://www.xmind.net/download/linux/</a></p>
@@ -267,40 +267,40 @@
 </ul>
 <h3 id="9、遇到妹纸装个逼"><a href="#9、遇到妹纸装个逼" class="headerlink" title="9、遇到妹纸装个逼"></a>9、遇到妹纸装个逼</h3><p><img src="http://upload-images.jianshu.io/upload_images/2190281-13cc0e79b23eca90.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="啦啦啦"></p>
 <ul>
-<li>打开终端，全屏<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cmatrix</span><br></pre></td></tr></table></figure>
+<li>打开终端，全屏<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install cmatrix</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>输入密码，安装后，输入<code>cmatrix -b</code>，逼格瞬间暴增,<code>Ctrl+c</code>退出</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-c4931790acc97cd1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="帅不帅"></p>
 <ul>
-<li>打开终端，全屏<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install sl</span><br></pre></td></tr></table></figure>
+<li>打开终端，全屏<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">sudo</span> apt-<span class="meta">get</span> install <span class="built_in">sl</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>安装后执行<code>sl</code>，怒看屏幕上一辆火车开过。。。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-796c5fbb64b16db6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="哈哈"></p>
 <ul>
-<li>打开终端，全屏<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet towel.blinkenlights.nl</span><br></pre></td></tr></table></figure>
+<li>打开终端，全屏<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet towel<span class="selector-class">.blinkenlights</span><span class="selector-class">.nl</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-8fb75ff8f4e3544f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="看完喽"></p>
 <p>静静等待终端下即将开始播放的《星球大战》吧，按下<code>Ctrl+]</code>后输入<code>quit</code>退出</p>
 <h3 id="10、无聊来发小游戏"><a href="#10、无聊来发小游戏" class="headerlink" title="10、无聊来发小游戏"></a>10、无聊来发小游戏</h3><p>代码敲累了，换个思维吧，在终端玩游戏也是挺程序员的。</p>
 <ul>
-<li>BASTET（俄罗斯方块的玩法）<br>安装<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install bastet</span><br><span class="line">bastet</span><br></pre></td></tr></table></figure>
+<li>BASTET（俄罗斯方块的玩法）<br>安装<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt <span class="keyword">install </span><span class="keyword">bastet</span></span><br><span class="line"><span class="keyword">bastet</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-275993793af172a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="bastet"></p>
 <ul>
-<li>NINVADERS（飞机大战坦克的玩法，空格键发射）<br>安装<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ninvaders</span><br><span class="line">ninvaders</span><br></pre></td></tr></table></figure>
+<li>NINVADERS（飞机大战坦克的玩法，空格键发射）<br>安装<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install ninvaders</span><br><span class="line">ninvaders</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-72fd5a46f2b12d52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="哈哈"></p>
 <ul>
 <li><p>2048（你懂的）<br>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/mevdschee/2048.c/master/2048.c gcc -o 2048 2048.c</span><br><span class="line">./2048</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="regexp">//</span>raw.githubusercontent.com<span class="regexp">/mevdschee/</span><span class="number">2048</span>.c<span class="regexp">/master/</span><span class="number">2048</span>.c gcc -o <span class="number">2048</span> <span class="number">2048</span>.c</span><br><span class="line">.<span class="regexp">/2048</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>BACKGAMMON（五子棋）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install bsdgames</span><br><span class="line">backgammon</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">sudo</span> apt-<span class="meta">get</span> install <span class="keyword">bsdgames</span></span><br><span class="line"><span class="keyword">backgammon</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-78fff060cd583d1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="一开始有点蒙"></p>

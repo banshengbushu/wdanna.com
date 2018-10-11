@@ -176,25 +176,25 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-e010f1e2ff26a110.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="可以记录以前使用过的命令"></p>
 <ul>
 <li><p><strong>快速跳转历史输入目录</strong><br>dirh (dir history)就可以显示当前会话中进入的文件夹纪录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ dirh</span><br><span class="line">/home/Documents/study/xiShuaShua</span><br><span class="line">/home/Documents/study/xiShuaShua/public</span><br><span class="line">/home/Documents/study/xiShuaShua/public/src</span><br><span class="line">/home/Documents/study/xiShuaShua/public/src/components</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ dirh</span><br><span class="line"><span class="regexp">/home/</span>Documents<span class="regexp">/study/</span>xiShuaShua</span><br><span class="line"><span class="regexp">/home/</span>Documents<span class="regexp">/study/</span>xiShuaShua/<span class="keyword">public</span></span><br><span class="line"><span class="regexp">/home/</span>Documents<span class="regexp">/study/</span>xiShuaShua<span class="regexp">/public/</span>src</span><br><span class="line"><span class="regexp">/home/</span>Documents<span class="regexp">/study/</span>xiShuaShua<span class="regexp">/public/</span>src/components</span><br></pre></td></tr></table></figure>
 <p><code>prevd</code>和 <code>nextd</code>跳转<br>假如曾进入过 1 2 3 4 5 这几个文件夹, <code>prevd 4</code> 可以让你在 5 中直接跳到 1</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$~/D/s/xiShuaShua&gt; prevd 1</span><br><span class="line">~/D/s/x/public&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$~/D/<span class="keyword">s</span>/xiShuaShua&gt; prevd <span class="number">1</span></span><br><span class="line">~<span class="regexp">/D/s</span><span class="regexp">/x/public</span>&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="3、安装"><a href="#3、安装" class="headerlink" title="3、安装"></a>3、安装</h4><ul>
 <li><p>执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-add-repository ppa:fish-shell/release-2</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install fish</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="built_in">add</span>-repository <span class="keyword">pp</span><span class="variable">a:fish</span>-<span class="keyword">shell</span>/release-<span class="number">2</span></span><br><span class="line">$ sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">$ sudo apt-<span class="built_in">get</span> install fish</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>打开终端启动<code>fish</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ fish</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> fish</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="4、改为默认shell"><a href="#4、改为默认shell" class="headerlink" title="4、改为默认shell"></a>4、改为默认shell</h4><ul>
 <li><p>执行这条命令查看路径</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ which fish</span><br><span class="line">#我的路径如下</span><br><span class="line">/usr/bin/fish</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">which</span> fish</span></span><br><span class="line"><span class="meta">#</span><span class="bash">我的路径如下</span></span><br><span class="line">/usr/bin/fish</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>设置默认shell</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ chsh -s /usr/bin/fish</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> chsh -s /usr/bin/fish</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重启终端打开即可</p>
 </li>
@@ -203,13 +203,13 @@
 <p>其实用<strong>fish</strong>已经很久了，但一直由于自己的误解，今天才解决这个问题——不能使用<strong>nvm</strong>,其实很简单，依次执行以下命令</p>
 <ul>
 <li><p>首先依次执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/creationix/nvm.git ~/.nvm</span><br><span class="line">$ cd ~/.nvm</span><br><span class="line">$ ~/.nvm&gt; git checkout (git describe --abbrev=0 --tags)</span><br><span class="line">$ cd ~/.config/fish</span><br><span class="line">$ ~/.c/fish&gt; git clone git://github.com/passcod/nvm-fish-wrapper.git nvm-wrapper</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/creationix/nvm.git ~/.nvm</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/.nvm</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ~/.nvm&gt; git checkout (git describe --abbrev=0 --tags)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/.config/fish</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ~/.c/fish&gt; git <span class="built_in">clone</span> git://github.com/passcod/nvm-fish-wrapper.git nvm-wrapper</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在<code>config.fish</code>中加入底下这句命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.config/fish/nvm-wrapper/nvm.fish</span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span> ~<span class="regexp">/.config/</span>fish<span class="regexp">/nvm-wrapper/</span>nvm.fish</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>检查是否成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ nvm --version</span><br><span class="line">0.29.0</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ nvm --version</span><br><span class="line"><span class="number">0.29</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="6、快去试试吧"><a href="#6、快去试试吧" class="headerlink" title="6、快去试试吧"></a>6、快去试试吧</h4><hr>
@@ -221,13 +221,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/10/11/模态框和禁止页面滚动/" style="float: left;">
-        ← 模态框和禁止页面滚动
+    <a class="pull-left" href="/2018/10/11/浏览器 HTTP Cache (已验证)/" style="float: left;">
+        ← 浏览器 HTTP Cache 策略 (已验证)
     </a>
     
     
-    <a class="pull-right" href="/2018/10/11/那些来印度我才知道的事/">
-        那些来印度我才知道的事 →
+    <a class="pull-right" href="/2018/10/11/修改文件要不要重启 - 一期考试系统/">
+        修改文件要不要重启 - 一期考试系统 →
     </a>
     
 </nav>

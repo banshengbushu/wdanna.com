@@ -180,14 +180,14 @@
 <p><strong>自己写了一个Demo，建议，打开demo，可边看边试，会理解的特别快，点击<a href="https://banshengbushu.github.io/flex-demo/" target="_blank" rel="noopener">在线演示</a>可修改样式</strong></p>
 <h2 id="Container的属性（6个）"><a href="#Container的属性（6个）" class="headerlink" title="Container的属性（6个）"></a>Container的属性（6个）</h2><p>从概念图可以看出，flex布局有两个最大的概念也就是container和item，所以相应地所有属性也只对这两个元素起作用的，下来介绍container的属性，当然前提是container设置了<code>display: flex</code></p>
 <ul>
-<li><strong>1. flex-direction</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  flex-direction: row | row-reverse | column | column-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><strong>1. flex-direction</strong><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
 <p>设置item排列的方向<br>默认是row，从主轴的起点向终点依次排列。<br>row-reverse: 从主轴的终点位置开始向起点依次排列。<br>column: 从侧轴的起点向终点依次排列。<br>column-reverse: 从侧轴的起点位置开始向终点依次排列。<br><strong>注意设置了这个属性的item会影响tab键的顺序哦。</strong></p>
 </blockquote>
 <ul>
-<li><strong>2. flex-wrap</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container&#123;</span><br><span class="line">  flex-wrap: nowrap | wrap | wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><strong>2. flex-wrap</strong><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -200,7 +200,7 @@
 </blockquote>
 </li>
 <li><p><strong>4.  justify-content</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  justify-content: flex-start | flex-end | center | space-between | space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  justify-content: flex-start | flex-<span class="keyword">end</span> | center | <span class="literal">space</span>-<span class="keyword">between</span> | <span class="literal">space</span>-<span class="keyword">around</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -214,7 +214,7 @@
 </ul>
 </blockquote>
 <ul>
-<li><strong>5. align-items</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  align-items: flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><strong>5. align-items</strong><figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  align-items: flex-start | <span class="type">flex</span>-<span class="keyword">end</span> | <span class="type">center</span> | <span class="type">baseline</span> | <span class="type">stretch</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -234,14 +234,14 @@
 </li>
 </ul>
 <h1 id="item的属性"><a href="#item的属性" class="headerlink" title="item的属性"></a>item的属性</h1><ul>
-<li><strong>1. order</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">  order: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><strong>1. order</strong><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
 <p>按照order的属性排列元素, 数值小的在前面，还可以是负数，默认是0</p>
 </blockquote>
 <ul>
-<li><strong>2. flex-grow</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">  flex-grow: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><strong>2. flex-grow</strong><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -251,7 +251,7 @@
 </ul>
 </blockquote>
 <ul>
-<li><strong>3.  flex-shrink</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">  flex-shrink: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><strong>3.  flex-shrink</strong><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex-shrink</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -277,7 +277,7 @@
 </ul>
 </blockquote>
 <ul>
-<li><strong>6. align-self</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">  align-self: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><strong>6. align-self</strong><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">align-self</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -291,13 +291,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/10/11/优雅的Markdown/" style="float: left;">
-        ← 优雅的Markdown
+    <a class="pull-left" href="/2018/10/11/老哥，你别又把天聊死了/" style="float: left;">
+        ← 老哥，你别又把天聊死了
     </a>
     
     
-    <a class="pull-right" href="/2018/10/11/试了六天GTD的我/">
-        试了六天GTD的我 →
+    <a class="pull-right" href="/2018/10/11/使用apt-get和nvm安装node的区别/">
+        使用apt-get和nvm安装node的区别 →
     </a>
     
 </nav>

@@ -159,10 +159,10 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="一、安装步骤一切ok"><a href="#一、安装步骤一切ok" class="headerlink" title="一、安装步骤一切ok"></a>一、安装步骤一切ok</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">启动时 </span><br><span class="line">$ sudo service mongodb start</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#报错 </span><br><span class="line">couldn&apos;t connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146</span><br></pre></td></tr></table></figure>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#停止时</span><br><span class="line">$ sudo service mongodb stop</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#报错 </span><br><span class="line">unknown instance</span><br></pre></td></tr></table></figure>
+      		<h2 id="一、安装步骤一切ok"><a href="#一、安装步骤一切ok" class="headerlink" title="一、安装步骤一切ok"></a>一、安装步骤一切ok</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">启动时 </span><br><span class="line">$ sudo<span class="built_in"> service </span>mongodb start</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#报错 </span></span><br><span class="line">couldn't connect <span class="keyword">to</span> server <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">27017</span> (<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>), connection attempt failed <span class="keyword">at</span> src/mongo/shell/mongo.js:<span class="number">146</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#停止时</span></span><br><span class="line">$ sudo<span class="built_in"> service </span>mongodb stop</span><br></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#报错 </span><br><span class="line">unknown <span class="keyword">instance</span></span><br></pre></td></tr></table></figure>
 <p>搜了下有人这样解决了：</p>
 <blockquote>
 <ul>
@@ -174,33 +174,33 @@
 </ul>
 </blockquote>
 <p>但我也试了，却没有解决…</p>
-<p><strong>卸载之前装的mongodb</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get purge mongodb-org</span><br><span class="line">$ sudo apt-get autoremoveRemove the old mongodb.list you created</span><br><span class="line">$ sudo rm /etc/apt/sources.list.d/mongodb.list</span><br></pre></td></tr></table></figure></p>
+<p><strong>卸载之前装的mongodb</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get purge mongodb-org</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get autoremoveRemove the old mongodb.list you created</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo rm /etc/apt/sources.list.d/mongodb.list</span></span><br></pre></td></tr></table></figure></p>
 <p>准备重新安装，由失败到成功，整理了一下：</p>
 <ul>
 <li><p>执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mongodb-server</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install mongodb-server</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>进入目录  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~<span class="string">/.bashrc</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>添加此句</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ export PATH=/home/yhl/mongodb-linux/bin:$PATH</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>export PATH=<span class="regexp">/home/yhl</span><span class="regexp">/mongodb-linux/bin</span><span class="symbol">:</span><span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>查看版本号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongod -version</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mongod -version</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir data</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir <span class="class"><span class="keyword">data</span></span></span><br></pre></td></tr></table></figure>
 </li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir log</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="built_in">log</span></span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongod --dbpath data/ --logpath log/mongodb.log -logappend --fork</span><br></pre></td></tr></table></figure>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">$</span> <span class="comment">mongod</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">dbpath</span> <span class="comment">data/</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">logpath</span> <span class="comment">log/mongodb</span><span class="string">.</span><span class="comment">log</span> <span class="literal">-</span><span class="comment">logappend</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">fork</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>最后将启动命令保存在start中，方便下次启动使用（亲测成功）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo &quot;mongod --dbpath data/ --logpath log/mongodb.log -logappend --fork&quot;&gt;&gt; [start.sh](http://start.sh/)</span><br></pre></td></tr></table></figure>
+<li>最后将启动命令保存在start中，方便下次启动使用（亲测成功）<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo "mongod --dbpath data/ --logpath log/mongodb.log -logappend --fork"&gt;&gt; [<span class="string">start.sh</span>](<span class="link">http://start.sh/</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="二、补充一下之前遇到的问题："><a href="#二、补充一下之前遇到的问题：" class="headerlink" title="二、补充一下之前遇到的问题："></a>二、补充一下之前遇到的问题：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service mongod start</span><br><span class="line">Failed to start mongod.service: Unit mongod.service failed to load:</span><br><span class="line">No such file or directory.</span><br></pre></td></tr></table></figure>
-<p>添加以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=High-performance, schema-free document-oriented database</span><br><span class="line">Documentation=man:mongod(1)</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">User=mongodb</span><br><span class="line">Group=mongodbRuntime</span><br><span class="line">Directory=mongodPIDFile=/var/run/mongod/mongod.pid</span><br><span class="line">ExecStart=/usr/bin/mongod -f /etc/mongod.conf --pidfilepath /var/run/mongod/mongod.pid --fork</span><br><span class="line">TimeoutStopSec=5</span><br><span class="line">KillMode=mixed</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure></p>
+<h3 id="二、补充一下之前遇到的问题："><a href="#二、补充一下之前遇到的问题：" class="headerlink" title="二、补充一下之前遇到的问题："></a>二、补充一下之前遇到的问题：</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo<span class="built_in"> service </span>mongod start</span><br><span class="line">Failed <span class="keyword">to</span> start mongod.service: Unit mongod.service failed <span class="keyword">to</span> load:</span><br><span class="line"><span class="literal">No</span> such file <span class="keyword">or</span> directory.</span><br></pre></td></tr></table></figure>
+<p>添加以下内容：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=High-performance, schema-free document-oriented database</span><br><span class="line"><span class="attr">Documentation</span>=man:mongod(<span class="number">1</span>)</span><br><span class="line"><span class="attr">After</span>=network.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=forking</span><br><span class="line"><span class="attr">User</span>=mongodb</span><br><span class="line"><span class="attr">Group</span>=mongodbRuntime</span><br><span class="line"><span class="attr">Directory</span>=mongodPIDFile=/var/run/mongod/mongod.pid</span><br><span class="line"><span class="attr">ExecStart</span>=/usr/bin/mongod -f /etc/mongod.conf --pidfilepath /var/run/mongod/mongod.pid --fork</span><br><span class="line"><span class="attr">TimeoutStopSec</span>=<span class="number">5</span></span><br><span class="line"><span class="attr">KillMode</span>=mixed</span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></table></figure></p>
 <p>就可以解决了。</p>
 <p><strong>我是半生不熟 喜欢照自己的怪念头行事<br>喜欢一切意外 想把生活过成诗的样子<br>若哪天有幸相遇 请别诧异 其实我并不是个乖孩子</strong></p>
 
@@ -209,13 +209,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/10/11/使用apt-get和nvm安装node的区别/" style="float: left;">
-        ← 使用apt-get和nvm安装node的区别
+    <a class="pull-left" href="/2018/10/11/剪不断理还乱 | GTD 第三弹/" style="float: left;">
+        ← 剪不断理还乱 | GTD 第三弹
     </a>
     
     
-    <a class="pull-right" href="/2018/10/11/修改文件要不要重启 - 一期考试系统/">
-        修改文件要不要重启 - 一期考试系统 →
+    <a class="pull-right" href="/2018/10/11/模态框和禁止页面滚动/">
+        模态框和禁止页面滚动 →
     </a>
     
 </nav>
