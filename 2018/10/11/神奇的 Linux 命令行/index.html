@@ -150,7 +150,7 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2018-10-11T08:11:32.000Z" itemprop="datePublished">
+      <time datetime="2018-10-11T12:11:53.000Z" itemprop="datePublished">
           2018-10-11
       </time>
     
@@ -159,7 +159,7 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>####1、命令行真的好吗<br><img src="http://upload-images.jianshu.io/upload_images/2190281-654d37c0cc309fba.jpg" alt="程序员的使命"></p>
+      		<h4 id="1、命令行真的好吗"><a href="#1、命令行真的好吗" class="headerlink" title="1、命令行真的好吗"></a>1、命令行真的好吗</h4><p><img src="http://upload-images.jianshu.io/upload_images/2190281-654d37c0cc309fba.jpg" alt="程序员的使命"></p>
 <ul>
 <li><strong>维基百科的解释</strong><blockquote>
 <p>命令行界面（英语：command-line interface，缩写：CLI）是在图形用户界面得到普及之前使用最为广泛的用户界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。也有人称之为字符用户界面（CUI）。</p>
@@ -188,7 +188,7 @@
 </ul>
 </li>
 </ul>
-<p>###2、感受下效率<br>试着玩玩，就能体会到它的效率了</p>
+<h3 id="2、感受下效率"><a href="#2、感受下效率" class="headerlink" title="2、感受下效率"></a>2、感受下效率</h3><p>试着玩玩，就能体会到它的效率了</p>
 <table>
 <thead>
 <tr>
@@ -243,8 +243,77 @@
 </tr>
 </tbody>
 </table>
-<p>###3、基本命令行<br>|使用命令|用途|<br>|————|——-|<br>|  sudo passwd root |   设置root密码（输入当前系统账户的密码并设置新的UNIX密码 |<br>|users| 显示当前登录系统地用户|<br>|who| 登录在本机的用户与来源|<br>|hostname| 查看主机名<br>|man <command-name>|会为给定的命令显示一个使用手册页面|<br>|tail -n N <file-name>|指定在标准输出上显示文件的最后N行内容（默认显示10行）|<br>|grep “<string>“ <file-name>|在给定的文件中搜寻指定的字符串|<br>|tar xvf FileName.tar|解包|<br>|tar cvf FileName.tar DirName|打包文件|<br>|gzip -d FileName.gz|解压|<br>|gzip FileName|压缩|<br>|which &lt;file_name&gt; | 查看可执行文件的位置，在PATH变量指定的路径中查看系统命令是否存在及其位置</file-name></string></file-name></command-name></p>
-<p>####4、这些你也要会（举例说明）<br>|使用命令|用途|<br>|————|——-|<br>|<figure class="highlight plain"><figcaption><span>cat >></span><a href="/Documents/test.txt"><<  "EOF"export PATH</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">|tree #使用`sudo apt-get install tree`安装|将文件目录以树状形式查看，有时候很方便|</span><br><span class="line">|echo  &quot;line 1\nline 1&quot; |   显示`line 1\nline 1`|</span><br><span class="line">|echo -e &quot;line 1\nline 2&quot; |   显示`line 1(换行了)line 2`（-e：遇到转义字符特殊处理）|</span><br><span class="line">|ps -aux | 显示所有进程状态|</span><br><span class="line">|kill &lt;进程号(就是ps -A中的第一列的数字)&gt;|终止一个进程|</span><br><span class="line">|kill -9 &lt;进程号&gt;|强制中止一个进程(在上面进程中止不成功的时候使用)|</span><br><span class="line">|netstat -tp  |查看网络连接命令|</span><br><span class="line">|service --status-all  |查看系统服务状态|</span><br><span class="line">|whereis &lt;安装的应用名称&gt;  |查找应用位置</span><br><span class="line">####5神奇的`top`</span><br><span class="line">**这里选择把top单独介绍（信息量略大）**</span><br><span class="line">* `top`的用途—作为日常管理工作中最常用也是最重要的Linux 系统监控工具之一，可以动态观察系统进程状况，显示当前系统正在执行的进程的相关信息，包括进程ID、内存占用率、CPU占用率等默认值是每5秒更新一次，按q键可以退出。</span><br><span class="line">* 在你的终端输入这条命令即可查看</span><br></pre></td></tr></table></figure></p>
+<h3 id="3、基本命令行"><a href="#3、基本命令行" class="headerlink" title="3、基本命令行"></a>3、基本命令行</h3><table>
+<thead>
+<tr>
+<th>使用命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sudo passwd root</td>
+<td>设置root密码（输入当前系统账户的密码并设置新的UNIX密码</td>
+</tr>
+<tr>
+<td>users</td>
+<td>显示当前登录系统地用户</td>
+</tr>
+<tr>
+<td>who</td>
+<td>登录在本机的用户与来源</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>查看主机名</td>
+</tr>
+<tr>
+<td>man <command-name></command-name></td>
+<td>会为给定的命令显示一个使用手册页面</td>
+</tr>
+<tr>
+<td>tail -n N <file-name></file-name></td>
+<td>指定在标准输出上显示文件的最后N行内容（默认显示10行）</td>
+</tr>
+<tr>
+<td>grep “<string>“ <file-name></file-name></string></td>
+<td>在给定的文件中搜寻指定的字符串</td>
+</tr>
+<tr>
+<td>tar xvf FileName.tar</td>
+<td>解包</td>
+</tr>
+<tr>
+<td>tar cvf FileName.tar DirName</td>
+<td>打包文件</td>
+</tr>
+<tr>
+<td>gzip -d FileName.gz</td>
+<td>解压</td>
+</tr>
+<tr>
+<td>gzip FileName</td>
+<td>压缩</td>
+</tr>
+<tr>
+<td>which &lt;file_name&gt;</td>
+<td>查看可执行文件的位置，在PATH变量指定的路径中查看系统命令是否存在及其位置</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4、这些你也要会（举例说明）"><a href="#4、这些你也要会（举例说明）" class="headerlink" title="4、这些你也要会（举例说明）"></a>4、这些你也要会（举例说明）</h4><table>
+<thead>
+<tr>
+<th>使用命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><figure class="highlight plain"><figcaption><span>cat >></span><a href="/Documents/test.txt"><<  "EOF"export PATH</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">|tree #使用`sudo apt-get install tree`安装|将文件目录以树状形式查看，有时候很方便|</span><br><span class="line">|echo  &quot;line 1\nline 1&quot; |   显示`line 1\nline 1`|</span><br><span class="line">|echo -e &quot;line 1\nline 2&quot; |   显示`line 1(换行了)line 2`（-e：遇到转义字符特殊处理）|</span><br><span class="line">|ps -aux | 显示所有进程状态|</span><br><span class="line">|kill &lt;进程号(就是ps -A中的第一列的数字)&gt;|终止一个进程|</span><br><span class="line">|kill -9 &lt;进程号&gt;|强制中止一个进程(在上面进程中止不成功的时候使用)|</span><br><span class="line">|netstat -tp  |查看网络连接命令|</span><br><span class="line">|service --status-all  |查看系统服务状态|</span><br><span class="line">|whereis &lt;安装的应用名称&gt;  |查找应用位置|</span><br><span class="line">#### 5神奇的`top`</span><br><span class="line">**这里选择把top单独介绍（信息量略大）**</span><br><span class="line">* `top`的用途—作为日常管理工作中最常用也是最重要的Linux 系统监控工具之一，可以动态观察系统进程状况，显示当前系统正在执行的进程的相关信息，包括进程ID、内存占用率、CPU占用率等默认值是每5秒更新一次，按q键可以退出。</span><br><span class="line">* 在你的终端输入这条命令即可查看</span><br></pre></td></tr></table></figure></td>
+</tr>
+</tbody>
+</table>
 <p>$ top<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 它会出现这些信息（本人电脑举例）</span><br></pre></td></tr></table></figure></p>
 <p>top - 21:11:46 up 29 min,  2 users,  load average: 0.29, 0.28, 0.18<br>Tasks: 240 total,   1 running, 239 sleeping,   0 stopped,   0 zombie<br>%Cpu(s):  2.6 us,  0.8 sy,  0.0 ni, 96.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st<br>KiB Mem :  8081084 total,  4966452 free,  1533752 used,  1580880 buff/cache<br>KiB Swap:        0 total,        0 free,        0 used.  5930172 avail Mem </p>
 <p>  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND<br>  979 root      20   0  370140  45300  33148 S   4.6  0.6   0:56.69 Xorg<br> 3473 wangdan+  20   0  643452  53564  31976 S   3.3  0.7   0:01.12 python2<br> 2067 wangdan+  20   0 1233768 113492  65108 S   2.3  1.4   1:06.83 compiz<br>  769 mongodb   20   0  552156  67876  33636 S   0.7  0.8   0:12.55 mongod<br> 2466 wangdan+  20   0 1122656 213372 122840 S   0.7  2.6   1:42.89 chrome<br> 3509 wangdan+  20   0   49044   4240   3516 R   0.7  0.1   0:00.52 top<br> 3552 wangdan+  20   0  924300 189484  82964 S   0.7  2.3   0:04.20 chrome<br> 1680 wangdan+  20   0  578900 101304  46068 S   0.3  1.3   0:03.93 fcitx<br> 1905 wangdan+  20   0  206868   6532   5900 S   0.3  0.1   0:00.23 at-spi2-registr<br> 2097 wangdan+  20   0  469672  14668  11180 S   0.3  0.2   0:00.33 indicator-appli<br> 2398 wangdan+  20   0 3091788  80880  49128 S   0.3  1.0   0:03.90 sogou-qimpanel<br> 3141 root      20   0       0      0      0 S   0.3  0.0   0:00.24 kworker/u8:2<br> 3581 wangdan+  20   0  531268  52284  28648 S   0.3  0.6   0:00.12 chrome<br>    1 root      20   0  185468   6144   4020 S   0.0  0.1   0:02.98 systemd<br>    2 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kthreadd<br>    3 root      20   0       0      0      0 S   0.0  0.0   0:00.02 ksoftirqd/0<br>    5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0H<br>    6 root      20   0       0      0      0 S   0.0  0.0   0:01.88 kworker/u8:0<br>    7 root      20   0       0      0      0 S   0.0  0.0   0:01.92 rcu_sched<br>    8 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh<br>    9 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/0<br>   10 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/0<br>   11 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/1<br>   12 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/1<br>   13 root      20   0       0      0      0 S   0.0  0.0   0:00.02 ksoftirqd/1<br>   14 root      20   0       0      0      0 S   0.0  0.0   0:00.01 kworker/1:0<br>   15 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/1:0H<br>   16 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/2<br>   17 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/2<br>   18 root      20   0       0      0      0 S   0.0  0.0   0:00.06 ksoftirqd/2<br>   20 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/2:0H<br>   21 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/3<br>   22 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/3<br>   23 root      20   0       0      0      0 S   0.0  0.0   0:00.01 ksoftirqd/3<br>   25 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/3:0H<br>   26 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kdevtmpfs<br><code>`</code></p>
@@ -301,8 +370,7 @@
 </ul>
 </li>
 </ul>
-<p>####6、参考（来自<a href="https://bbs.excellence-girls.org/topic/213/markdown" target="_blank" rel="noopener">卓越女生BBS总理的分享</a>）</p>
-<ul>
+<h4 id="6、参考（来自卓越女生BBS总理的分享）"><a href="#6、参考（来自卓越女生BBS总理的分享）" class="headerlink" title="6、参考（来自卓越女生BBS总理的分享）"></a>6、参考（来自<a href="https://bbs.excellence-girls.org/topic/213/markdown" target="_blank" rel="noopener">卓越女生BBS总理的分享</a>）</h4><ul>
 <li><a href="https://github.com/iamcoach/console/blob/master/COMMANDS.md" target="_blank" rel="noopener">常用命令行介绍</a></li>
 <li><a href="https://bbs.excellence-girls.org/topic/167" target="_blank" rel="noopener">常用命令行cheet sheet</a></li>
 <li><a href="http://www.imooc.com/article/1276" target="_blank" rel="noopener">每个程序员都应该知道的8个Linux命令</a></li>
@@ -321,13 +389,9 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/10/11/究竟要不要分组，我们讨论了两周/" style="float: left;">
-        ← 究竟要不要分组，我们讨论了两周
-    </a>
     
-    
-    <a class="pull-right" href="/2018/10/11/盲打那些事儿/">
-        盲打那些事儿 →
+    <a class="pull-right" href="/2018/10/11/软链接与硬链接/">
+        软链接与硬链接 →
     </a>
     
 </nav>

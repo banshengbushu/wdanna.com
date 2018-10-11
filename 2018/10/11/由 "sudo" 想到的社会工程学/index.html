@@ -150,7 +150,7 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2018-10-11T08:10:57.000Z" itemprop="datePublished">
+      <time datetime="2018-10-11T12:04:16.000Z" itemprop="datePublished">
           2018-10-11
       </time>
     
@@ -159,20 +159,18 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>###来源于</p>
-<blockquote>
+      		<h3 id="来源于"><a href="#来源于" class="headerlink" title="来源于"></a>来源于</h3><blockquote>
 <p>其实用了sudo，以后你用npm是以管理员权限执行的，安全性会成问题，当然要配合一些社会工程的手法才能真正触发这个安全漏洞</p>
 </blockquote>
 <p>1、先不说这个会造成多大的安全性问题，从老师的话中，我想到一个一直在使用的命令但从来没有想过原因的问题—<strong>执行<code>apt-get</code>为什么一定要加<code>sudo</code></strong></p>
 <p>2、安全性指的是什么，社会工程学的手法又是什么</p>
 <p>3、试了试 不加<code>sudo</code>是这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get install skype</span><br><span class="line">E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)</span><br><span class="line">E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?</span><br></pre></td></tr></table></figure></p>
-<p>###为什么一定要加sudo</p>
-<ul>
+<h3 id="为什么一定要加sudo"><a href="#为什么一定要加sudo" class="headerlink" title="为什么一定要加sudo"></a>为什么一定要加sudo</h3><ul>
 <li>使用包管理器<code>apt get</code>是要往<code>root</code>用户下装内容，所以要加<code>sudo</code>执行</li>
 <li><code>sudo</code>在英语里的意思是switch user and do something，在Linux系统上，你需要root权限来安装和卸载软件包</li>
 <li><code>sudo</code>执行命令的流程是当前用户切换到<code>root</code>（或其它指定切换到的用户），然后以<code>root</code>（或其它指定的切换到的用户）身份执行命令，执行完成后，直接退回到当前用户；而这些的前提是要通过sudo的配置文件<code>/etc/sudoers</code>来进行授权，并且定义了一些具体命令，在假定的身份下，特殊用户 可以执行这些命令，暂时只理解了这些，具体了解可戳链接</li>
 </ul>
-<p>###这里的安全问题<br>引用大胡子老师的例子</p>
+<h3 id="这里的安全问题"><a href="#这里的安全问题" class="headerlink" title="这里的安全问题"></a>这里的安全问题</h3><p>引用大胡子老师的例子</p>
 <blockquote>
 <p>如果我上传了一个不太好的npm包，让你装一下，说帮我测试一下，你install完，sudo一执行。我就可以改系统文件了。如果我给你的npm里的脚本实际上是删除系统文件，你就傻了</p>
 </blockquote>
@@ -183,8 +181,7 @@
 <p><code>sudo</code>就好像人的DNA，不能不计后果的乱改，但有一点，<code>apt-get</code>是内置的，它是安全的，而<code>apt-get</code>的源也是内置的，也是安全的，linux默认是懂技术的人操作而不是不懂技术的人操作</p>
 <p>找了找当年的“一个空格引发的惨案”<a href="http://coolshell.cn/articles/4875.html" target="_blank" rel="noopener">http://coolshell.cn/articles/4875.html</a><br><a href="https://github.com/MrMEEE/bumblebee-Old-and-abbandoned" target="_blank" rel="noopener">源码在这里</a></p>
 <p>使用Linux需保持这七个好习惯，详见<a href="http://www.bspcn.com/2008/04/17/the-7-habits-of-highly-effective-linux-users/" target="_blank" rel="noopener">http://www.bspcn.com/2008/04/17/the-7-habits-of-highly-effective-linux-users/</a></p>
-<p>###社会工程学问题</p>
-<ul>
+<h3 id="社会工程学问题"><a href="#社会工程学问题" class="headerlink" title="社会工程学问题"></a>社会工程学问题</h3><ul>
 <li><p>知乎上大神如是说</p>
 <blockquote>
 <p>社会工程学是更高明的骗术。<br>社会工程学在意的是对方的非物质资源，诈骗在意的是对方的物质资源;<br>社会工程学更加的系统，诈骗相对松散;<br>社会工程师更有耐心，诈骗者相对没有耐心;<br>社会工程师拥有大量的反攻击手段，诈骗者的反攻击能力较弱;<br>社会工程师一般情况下是有目标的，诈骗者是没有目标的;<br>社会工程师能力要求很高，社会学，心理学，行为学，数据分析，数据收集等等，而诈骗相对来说能力要求较低;<br>防范社会工程师的难度较大，而防范诈骗者的难度较小;</p>
@@ -207,8 +204,8 @@
     </a>
     
     
-    <a class="pull-right" href="/2018/10/11/用自己的钱给妈妈买东西的感觉老爽了/">
-        用自己的钱给妈妈买东西的感觉老爽了 →
+    <a class="pull-right" href="/2018/10/11/《假面饭店》|| 我认识了东野圭吾/">
+        《假面饭店》|| 我认识了东野圭吾 →
     </a>
     
 </nav>

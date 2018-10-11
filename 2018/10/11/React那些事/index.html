@@ -150,7 +150,7 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2018-10-11T07:55:40.000Z" itemprop="datePublished">
+      <time datetime="2018-10-11T12:04:16.000Z" itemprop="datePublished">
           2018-10-11
       </time>
     
@@ -167,7 +167,7 @@
 <li><strong>Learn Once, Write Anywhere</strong></li>
 </ul>
 <p>##核心思想</p>
-<p>####<strong>组件化思想</strong><br>React 让我们重新规划界面，把任何一个功能独立的模块都定义成组件，即被独立封装的可复用 UI 部件。一个个的组件通过不断复用，组合与嵌套等，构成一套完整的 UI 界面。</p>
+<h4 id="组件化思想"><a href="#组件化思想" class="headerlink" title="组件化思想"></a><strong>组件化思想</strong></h4><p>React 让我们重新规划界面，把任何一个功能独立的模块都定义成组件，即被独立封装的可复用 UI 部件。一个个的组件通过不断复用，组合与嵌套等，构成一套完整的 UI 界面。</p>
 <p>一个组件的写法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;;</span><br><span class="line">import &#123; render &#125; from &apos;react-dom&apos;;</span><br><span class="line"></span><br><span class="line">class HelloMessage extends Component &#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;div&gt;Hello &#123;this.props.name&#125;&lt;/div&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">render(&lt;HelloMessage name=&quot;world&quot; /&gt;, mountNode);</span><br></pre></td></tr></table></figure>
 <p><code>render</code>会把这个组件显示到页面上的某个元素<code>mountNode</code>里面，显示的内容就是<div>Hello world</div></p>
@@ -180,14 +180,13 @@
 </ul>
 </li>
 </ul>
-<p>####<strong>JSX语法</strong>——有些人喜欢它，而其他人认为这是一个很大的退步，</p>
-<blockquote>
+<h4 id="JSX语法——有些人喜欢它，而其他人认为这是一个很大的退步，"><a href="#JSX语法——有些人喜欢它，而其他人认为这是一个很大的退步，" class="headerlink" title="JSX语法——有些人喜欢它，而其他人认为这是一个很大的退步，"></a><strong>JSX语法</strong>——有些人喜欢它，而其他人认为这是一个很大的退步，</h4><blockquote>
 <p>不得不说是一种非常聪明的做法，JSX代替传统的HTML Templates，让前端实现真正意义上的组件化成为了可能</p>
 </blockquote>
 <p>HTML直接嵌入了JS代码里面，前端被“表现和逻辑层分离”这种思想“洗脑”太久了，可能不好接受的设定之一。</p>
 <p>实际上组件的HTML是组成一个组件不可分割的一部分，能够将HTML封装起来才是组件的完全体，React发明了JSX让JS支持嵌入HTML，但它具有无可争议的优点：静态分析，JSX标记中发生错误，编译器会立即报错而不是留待运行时出现莫名其妙的问题。这有助于开发人员快速排查错误以及避免其它愚蠢的错误，比如拼写错误。</p>
 <p>好处是你可以不一定使用这种语法，但是要使用包含JSX 的组件，是需要“编译”输出JS 代码才能使用的</p>
-<p>####Virtual DOM<br>DOM是什么？</p>
+<h4 id="Virtual-DOM"><a href="#Virtual-DOM" class="headerlink" title="Virtual DOM"></a>Virtual DOM</h4><p>DOM是什么？</p>
 <blockquote>
 <p>DOM是Document Object Model，就是将XML（或者HTML）内的节点定义成基本统一的对象数据可以供程序语言（如javaScript）控制的技术规范<br>通过 DOM 你可以改变网页。</p>
 </blockquote>
@@ -208,7 +207,7 @@
 <li><p>得到DOM结构的区别，计算出最小变化集，进行实际的浏览器DOM更新（批量更新）。</p>
 </li>
 </ul>
-<p>####Data Flow<br>数据如何存放，如何更改数据，如何通知数据更改等等，单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。</p>
+<h4 id="Data-Flow"><a href="#Data-Flow" class="headerlink" title="Data Flow"></a>Data Flow</h4><p>数据如何存放，如何更改数据，如何通知数据更改等等，单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。</p>
 <p>接受输入数据（通过 this.props ），组件还可以保持内部状态数据（通过 this.state ）当一个组件的状态数据的变化。</p>
 <p><strong>React 组件之间交流的方式</strong></p>
 <p>组件免不了要与用户互动，React 的一大创新，就是将组件看成是一个状态机，一开始有一个初始状态，然后用户互动，导致状态变化，从而触发重新渲染 UI。</p>
@@ -268,13 +267,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/10/11/Reflux 实现 hello world/" style="float: left;">
-        ← Reflux 实现 hello world
+    <a class="pull-left" href="/2018/10/11/记第一次与外教视频经历，请拿走/" style="float: left;">
+        ← 记第一次与外教视频经历，请拿走
     </a>
     
     
-    <a class="pull-right" href="/2018/10/11/Pecha Kucha -- Constellations/">
-        Pecha Kucha - Constellations →
+    <a class="pull-right" href="/2018/10/11/20岁,有五个女孩.../">
+        20岁,有五个女孩... →
     </a>
     
 </nav>

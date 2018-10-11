@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>TWU那些曾经不认识的单词 | 半生不熟的个人网站 | 前端开发</title>
+  <title>Ubuntu 安装 mongoDB 报错 | 半生不熟的个人网站 | 前端开发</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -150,16 +150,16 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2018-10-11T07:57:39.000Z" itemprop="datePublished">
+      <time datetime="2018-10-11T11:57:31.000Z" itemprop="datePublished">
           2018-10-11
       </time>
     
 </span>
-                <h1>TWU那些曾经不认识的单词</h1>
+                <h1>Ubuntu 安装 mongoDB 报错</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>##一、安装步骤一切ok<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">启动时 </span><br><span class="line">$ sudo service mongodb start</span><br></pre></td></tr></table></figure></p>
+      		<h2 id="一、安装步骤一切ok"><a href="#一、安装步骤一切ok" class="headerlink" title="一、安装步骤一切ok"></a>一、安装步骤一切ok</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">启动时 </span><br><span class="line">$ sudo service mongodb start</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#报错 </span><br><span class="line">couldn&apos;t connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146</span><br></pre></td></tr></table></figure>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#停止时</span><br><span class="line">$ sudo service mongodb stop</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#报错 </span><br><span class="line">unknown instance</span><br></pre></td></tr></table></figure>
@@ -199,7 +199,7 @@
 <li>最后将启动命令保存在start中，方便下次启动使用（亲测成功）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo &quot;mongod --dbpath data/ --logpath log/mongodb.log -logappend --fork&quot;&gt;&gt; [start.sh](http://start.sh/)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>###二、补充一下之前遇到的问题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service mongod start</span><br><span class="line">Failed to start mongod.service: Unit mongod.service failed to load:</span><br><span class="line">No such file or directory.</span><br></pre></td></tr></table></figure></p>
+<h3 id="二、补充一下之前遇到的问题："><a href="#二、补充一下之前遇到的问题：" class="headerlink" title="二、补充一下之前遇到的问题："></a>二、补充一下之前遇到的问题：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service mongod start</span><br><span class="line">Failed to start mongod.service: Unit mongod.service failed to load:</span><br><span class="line">No such file or directory.</span><br></pre></td></tr></table></figure>
 <p>添加以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=High-performance, schema-free document-oriented database</span><br><span class="line">Documentation=man:mongod(1)</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">User=mongodb</span><br><span class="line">Group=mongodbRuntime</span><br><span class="line">Directory=mongodPIDFile=/var/run/mongod/mongod.pid</span><br><span class="line">ExecStart=/usr/bin/mongod -f /etc/mongod.conf --pidfilepath /var/run/mongod/mongod.pid --fork</span><br><span class="line">TimeoutStopSec=5</span><br><span class="line">KillMode=mixed</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure></p>
 <p>就可以解决了。</p>
 <p><strong>我是半生不熟 喜欢照自己的怪念头行事<br>喜欢一切意外 想把生活过成诗的样子<br>若哪天有幸相遇 请别诧异 其实我并不是个乖孩子</strong></p>
@@ -209,13 +209,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/10/11/WebStorm卡的问题/" style="float: left;">
-        ← WebStorm卡的问题
+    <a class="pull-left" href="/2018/10/11/剪不断理还乱 | GTD 第三弹/" style="float: left;">
+        ← 剪不断理还乱 | GTD 第三弹
     </a>
     
     
-    <a class="pull-right" href="/2018/10/11/Trello 无法打开/">
-        Trello 无法打开 →
+    <a class="pull-right" href="/2018/10/11/模态框和禁止页面滚动/">
+        模态框和禁止页面滚动 →
     </a>
     
 </nav>

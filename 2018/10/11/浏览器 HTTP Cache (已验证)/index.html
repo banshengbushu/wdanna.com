@@ -150,8 +150,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2018-09-22T14:19:56.000Z" itemprop="datePublished">
-          2018-09-22
+      <time datetime="2018-10-11T11:56:07.000Z" itemprop="datePublished">
+          2018-10-11
       </time>
     
 </span>
@@ -162,7 +162,7 @@
       		<p>很多人会觉得 HTTP 的 Caching 策略很难，我之前也不例外，究其原因，它是乌龟的屁股，规定（龟腚），在官方介绍中也没有给出简单有效的事实验证，自己也没有相对多的机会去实践验证。</p>
 <p>这样一来，很容易让人对它的认识比较模糊，也就很容易被忽略，有机会前两天和  <a href="https://liyaodong.com/" target="_blank" rel="noopener">项目组大牛</a> Pair 研究了之后，想出了一个较为简单方法可以快速地验证了一些 Case，通过一些测试用例可以清楚地得出一些结论，文末会给出 repo 的地址。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/2190281-9ffea266c68d97d1.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>###Cache<br>说到缓存，知乎上看到过这样一个解释，觉得还挺有意思。</p>
+<h3 id="Cache"><a href="#Cache" class="headerlink" title="Cache"></a>Cache</h3><p>说到缓存，知乎上看到过这样一个解释，觉得还挺有意思。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/2190281-df5cca82a32a6b2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Cache"></p>
 <blockquote>
 <p>如上图一样，Cache 可以认为是一种保管箱。<br>右边那个被锈掉的 Food Cache，就是部署在森林里的存应急物资的保管箱。功能是把你需要用的东西放在更容易拿到的地方。</p>
@@ -177,8 +177,7 @@
 <p>这也就为什么进入一个网页后之后的刷新会比首次快很多，归根结底都是 Cache 的功劳。</p>
 <p>至于缓存的作用，我想应该就不用多说了，减少服务器压力，减少网络延迟和带宽，加快网页加载速度等等，所以可想而知，一个优秀的缓存策略其实对网站的优化帮助还是蛮大的。</p>
 <p>那浏览器对资源的缓存究竟是怎么做到的？遵循什么策略，什么时候会返回 <code>304</code> 的 <code>code</code> ，具体有什么约束呢，我们来接着看。</p>
-<p>###HTTP 缓存策略</p>
-<blockquote>
+<h3 id="HTTP-缓存策略"><a href="#HTTP-缓存策略" class="headerlink" title="HTTP 缓存策略"></a>HTTP 缓存策略</h3><blockquote>
 <p><strong>HTTP 1.0</strong></p>
 </blockquote>
 <p>在 HTTP 1.0 的时代，可以通过在 HTTP <code>Header</code> 中设置以下两个值来控制缓存</p>
@@ -244,8 +243,7 @@
 <li><strong>ETag 和 max-age 一起使用是一个较好的缓存策略，在资源内容没有改变的情况下，服务器会返回 <code>304</code> ，让浏览器从缓存中读取资源，并且这时的缓存有效期会根据 max-age 的值自动向后 extend。</strong></li>
 </ul>
 <p>以上这些结论都可以从 repo 的测试用例中得到，我们使用了 <strong>puppeteer</strong>（谷歌官方出品的一个通过DevTools协议控制headless Chrome的Node库。可以通过Puppeteer的提供的api直接控制Chrome模拟大部分用户操作来进行UI Test或者作为爬虫访问页面来收集数据）来模拟对浏览器的操作， 还有前端测试框架 <strong>Jest</strong> 写了一些很容易看懂的测试用例, 大家也可以添加自己不明白想验证的 Case，也欢迎大家提 Feedback。</p>
-<p>###最后</p>
-<p>最后想说的是，很多人应该也见到过同样是  <code>200</code>的 <code>code</code>， 有些资源是 from memory cache，而有些却是 from disk cache 的，如下图<br><img src="https://upload-images.jianshu.io/upload_images/2190281-ec05410362c558aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="from disk cahce"></p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>最后想说的是，很多人应该也见到过同样是  <code>200</code>的 <code>code</code>， 有些资源是 from memory cache，而有些却是 from disk cache 的，如下图<br><img src="https://upload-images.jianshu.io/upload_images/2190281-ec05410362c558aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="from disk cahce"></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/2190281-f25375a25a1e7105.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="from memory cache"></p>
 <p>这个我们其实没有做过多的研究，因为这并不影响缓存策略的设置，但确定的是，这完全是由浏览器自己决定的，<code>memory cache</code> 会将资源存到内存中，从内存中获取，<code>disk cache</code> 则会将资源缓存到磁盘中，从磁盘中获取，<strong>二者最大的区别在于：当退出进程时，内存中的数据会被清空，而磁盘的数据则不会。大家如果感兴趣可以自己再做些研究的啦。</strong></p>
 <p>最后附上 <a href="https://drive.google.com/file/d/1Scr71fTScyWEPCWqUUms5Uypsk2rWSdK/view?usp=sharing" target="_blank" rel="noopener">PPT 的链接</a> 以及 <a href="https://github.com/banshengbushu/HTTP-Caching-demo" target="_blank" rel="noopener"> repo</a> 地址</p>
@@ -255,13 +253,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/09/22/有天我终于等到了那个人/" style="float: left;">
-        ← 有天我终于等到了那个人
+    <a class="pull-left" href="/2018/10/11/模态框和禁止页面滚动/" style="float: left;">
+        ← 模态框和禁止页面滚动
     </a>
     
     
-    <a class="pull-right" href="/2018/09/15/发现更大的世界/">
-        发现更大的世界 - 知乎2018 →
+    <a class="pull-right" href="/2018/10/11/这个 fish 不是鱼/">
+        这个 fish 不是鱼 →
     </a>
     
 </nav>
