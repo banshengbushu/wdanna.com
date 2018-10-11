@@ -183,10 +183,10 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/10/11/Ubuntu 安装 mongoDB 报错/">Ubuntu 安装 mongoDB 报错</a></h3>
+                    <h3><a href="/2018/10/11/Security in DNA/">Security in DNA</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-10-11T11:57:31.000Z" itemprop="datePublished">
+      <time datetime="2018-10-11T07:57:03.000Z" itemprop="datePublished">
           2018-10-11
       </time>
     
@@ -196,15 +196,15 @@
                 <div class="col-md-8">
                     <p>
                       
-                        一、安装步骤一切ok12启动时 $ sudo service mongodb start
-12#报错 couldn&apos;t connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146
- 12#停止时$ sudo service mongodb stop
-12#报错 unknown i
+                        第三周周的第一天，不得不说，时间真的很快，早上的一个session是关于Security的，听的不是很懂，临走前pair被一个问题卡住了，虽然不是什么大问题，但还是挺影响心情的。
+商量了team outing的事情，也总算有了着落，第一次的case study，虽然没有完全看完，但真的是尽力了，还是没有调整到很好的状态，但如果没有感觉错，应该比之前好些吧，总之，又是一周事情很多的时候。
+##Security about DNA
+##Th
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/10/11/Ubuntu 安装 mongoDB 报错/">Read More...</a>
+                        <a href="/2018/10/11/Security in DNA/">Read More...</a>
                     </p>
                     
                 </div>
@@ -216,10 +216,10 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/10/11/模态框和禁止页面滚动/">模态框和禁止页面滚动</a></h3>
+                    <h3><a href="/2018/10/11/Ruby on rails 环境配置/">Ruby on rails 环境配置</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-10-11T11:56:07.000Z" itemprop="datePublished">
+      <time datetime="2018-10-11T07:56:40.000Z" itemprop="datePublished">
           2018-10-11
       </time>
     
@@ -229,14 +229,18 @@
                 <div class="col-md-8">
                     <p>
                       
-                        问题今天帮朋友看了一个问题，是要实现点击按钮出现一个弹框以及背景遮罩的功能。
-因为项目在用Bootstrap，所以第一想法当然是直接用Bootstrap的模态框，但是奇葩的是一直出现闪退的情况，但之前从来没有遇到这种情况，就去搜了下。
-看到大部分人都说一般是因为JS文件发生了冲突，想了想可能项目引入的库有重写模态框的东西，但是试了半天也没有找到是哪个文件，于是决定换一种方式了，因为项目原因，要尽量少用库和插件实现，所以就去搜了搜，发现最
+                        ###配置之前从开始到现在不知道怀疑了多少遍网速，从实验室的无线到有线，从学校的CMCC到EDU到xayd，不知道执行了多少遍Ctrl V 和 Ctrl C，终于，功夫不负有心人，它成功了！！！
+周围有同学用apt-get安装的，有用rbenv安装的，也有用rvm安装的，这里简单介绍下它们分别是什么吧
+
+rvm 的设计理念是自动化，全面。 rbenv 的设计理念是规范化，小核。
+
+
+apt-get只能安装一个版本，如果使用了sudo a
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/10/11/模态框和禁止页面滚动/">Read More...</a>
+                        <a href="/2018/10/11/Ruby on rails 环境配置/">Read More...</a>
                     </p>
                     
                 </div>
@@ -248,10 +252,10 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/10/11/浏览器 HTTP Cache (已验证)/">浏览器 HTTP Cache 策略 (已验证)</a></h3>
+                    <h3><a href="/2018/10/11/Reflux 实现 hello world/">Reflux 实现 hello world</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-10-11T11:56:07.000Z" itemprop="datePublished">
+      <time datetime="2018-10-11T07:56:18.000Z" itemprop="datePublished">
           2018-10-11
       </time>
     
@@ -261,15 +265,23 @@
                 <div class="col-md-8">
                     <p>
                       
-                        很多人会觉得 HTTP 的 Caching 策略很难，我之前也不例外，究其原因，它是乌龟的屁股，规定（龟腚），在官方介绍中也没有给出简单有效的事实验证，自己也没有相对多的机会去实践验证。
-这样一来，很容易让人对它的认识比较模糊，也就很容易被忽略，有机会前两天和  项目组大牛 Pair 研究了之后，想出了一个较为简单方法可以快速地验证了一些 Case，通过一些测试用例可以清楚地得出一些结论，文末会给出 repo 的地址。
+                        初识Reflux
+Reflux  是一个简单的单向数据流应用库，灵感来自于ReactJs Flux
+解决了数据在React 应用中的流动方式及过程
 
-Cache说到
+需求分析
+用 Reflux 实现界面渲染 hello world
+
+分解任务
+使用 React 创建一个组件，在页面渲染出 hello word
+安装 Reflux
+创建一个 Action
+创建一个 Store，用来监听 Action ，并且获取 Action 传递的 hello worl
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/10/11/浏览器 HTTP Cache (已验证)/">Read More...</a>
+                        <a href="/2018/10/11/Reflux 实现 hello world/">Read More...</a>
                     </p>
                     
                 </div>
@@ -281,156 +293,10 @@ Cache说到
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/10/11/Git 入门篇/">Git 入门篇</a></h3>
+                    <h3><a href="/2018/10/11/Pecha Kucha -- Constellations/">Pecha Kucha - Constellations</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-10-11T11:56:07.000Z" itemprop="datePublished">
-          2018-10-11
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1、读音本人一直对技术词汇的发音有不可描述的强迫症现象，所以还是先来聊一聊它的发音。
-
-曾经偶尔不止一次地听到身边有人看着Git叫“鸡特”（谐音），从一开始的满脸懵逼到最后竟笑出了声…我觉得作为一个程序不管是猿还是媛，为了避免引起其他猿或者是媛莫名发笑，为了避=避免被一群诧异的眼光注视，为了避免在跟别人讨论技术问题的时候被人揪着发音不放，还是确保你的发音准确吧。
- 忘掉“鸡特”，记住“给特”！
-2、起源
-同生活中的许多伟大事物一样，Gi
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/11/Git 入门篇/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/11/修改文件要不要重启 - 一期考试系统/">修改文件要不要重启 - 一期考试系统</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-11T11:56:07.000Z" itemprop="datePublished">
-          2018-10-11
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        需要修改一期项目中的代码了,之前每次都是用”试一下”的方式得出要不要启动,现在总结下哪些情况需要启动什么1、首先再熟悉下每条命令的作用
-
-docker-compose up -d    —将会在后台启动并运行所有的容器
-docker-compose stop      —停止一个已经运行的容器，但不删除它，可通过docker-compose start重新启动它
-docker exec -it XX bash —方便用户在容器之外让容器
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/11/修改文件要不要重启 - 一期考试系统/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/11/这个 fish 不是鱼/">这个 fish 不是鱼</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-11T11:56:07.000Z" itemprop="datePublished">
-          2018-10-11
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1、介绍fish是一个用户友好的命令行外壳程序全称Friendly Interactive Shell可用于如 Linux 这样的 Unix 类操作系统中
-
-二逼青年用 bash，普通青年用 zsh，文艺青年用 fish
-
-fish的主页这样说—好了，这是一个为 90 后而生的命令行 shell
-对于一个没有学过并且不需要学习 bash（或者 Posix shell），我感觉 fish 是一个更好的选择
-2、好处那些高端的好处并没有使用
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/11/这个 fish 不是鱼/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/11/分群了，然后呢？/">分群了，然后呢？</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-11T11:56:07.000Z" itemprop="datePublished">
-          2018-10-11
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        终于还是决定分组了，又是一个月的尝试和挑战，最让我们高兴的是故事的结局让我们之前的种种疑虑和那些争的面红耳赤仿佛都沉寂于空气了。
-
-很多一开始就想对了的东西
-分组之前取大家一个月的打卡数据
-
-
-
-分组后大家一个月的打卡数据
-
-
-很多开始我们有争议的问题，现在从实践过的事实来看是没错的。比如分组后每个人的打卡率都稳定了许多，到现在那个良好群已经都在优秀群了，虽然中间有过波折，但是像那种出现四五次甚至更多的情况几乎没有了。
-不可否认的是，督
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/11/分群了，然后呢？/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/11/那些来印度我才知道的事/">那些来印度我才知道的事</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-11T08:18:04.000Z" itemprop="datePublished">
+      <time datetime="2018-10-11T07:55:11.000Z" itemprop="datePublished">
           2018-10-11
       </time>
     
@@ -441,20 +307,165 @@ fish的主页这样说—好了，这是一个为 90 后而生的命令行 shell
                     <p>
                       
                         
-那是从未见过的，不一样的风景，将 “贫穷”两个字如此明目张胆地暴露在光天化日之下的地方。
+Hello everyone, Tonight my topic is about constellations.Do you know about every one’s charactor of your friends and colleagues？Anyway,    I’m not! I often like ask them, Whats your sign? 
 
-
-2017年10月4日来到这片的陌生国度，一晃，18天已经过去了。
-
-这里安静，这里喧嚣，这里无法想象，这里不可思议，但是这里，最是让我觉得意外的是，我见到的，好像一切都还好。
-这里的半夜会很吵，早晨会被乌鸦叫醒，白天很热，晚上会骤然下起大雨，路上总会看到很多动物，鸽子出奇的多，站在窗口总会看到一群小孩在嬉戏。
-
-每每看到街上飞奔的摩托车总会让
+There are two versions of the
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/10/11/那些来印度我才知道的事/">Read More...</a>
+                        <a href="/2018/10/11/Pecha Kucha -- Constellations/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/11/Jenkins安装和配置/">Jenkins安装和配置</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-11T07:53:13.000Z" itemprop="datePublished">
+          2018-10-11
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        ##一、作用项目中一直在用Jenkins，但自己对这部分的开发参与的不是很多，最近准备毕设的时候才开始慌了，倒腾了大半天，之前也有人问我，就准备整理了下相关知识，也便以后回顾。
+我们在做项目的时候简单来说一般会有这五个步骤，开发—&gt;提交—&gt;编译—&gt;测试—&gt;部署。人工的流程走就是把项目同步到Git，再用 SSH 登录服务器把项目pull下来，再migrate数据库，运行单元测试和迁移静态资源，项目每天都会有若干个c
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/11/Jenkins安装和配置/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/11/HTML 那些事儿/">HTML 那些事儿</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-11T07:52:35.000Z" itemprop="datePublished">
+          2018-10-11
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        ###1、第一个需求
+
+###我的思考
+
+最外层的是两个无序列表（&lt;ul&gt;标签）
+靠近最外层的分别是两个有序列表（&lt;ol&gt;标签）
+最里层的也是无序列表（&lt;ul&gt;标签），这里应有一个type=“square”的属性
+所有列表项目都需要使用&lt;li&gt; 标签
+
+###实现效果
+
+###错误纠正对于开始理解的无序列表添加type=“square”的属性那块，在这里是不需要加的，因为默认的无序列表的嵌
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/11/HTML 那些事儿/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/11/CSS 实现动态百分比圆环/">CSS 实现动态百分比圆环</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-11T07:51:51.000Z" itemprop="datePublished">
+          2018-10-11
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        #效果展示没掌握上传动图的操作，这里就先截静态图吧
+
+
+#实现思路
+
+自己的思路
+
+一开始看到这个图的时候，想着应该不难
+
+外面一个div，里面一个div，一个背景深蓝色，一个背景白色
+蓝色的div加一个伪元素，背景浅蓝色，再裁剪一半
+
+还是先试试，写着写着发现中间各种设置四周边距，才让中间div居中，我都看不下去了
+
+参考了别人的思路
+
+看了有很多例子，一开始没看懂的时候，觉得都写的什么呀，有这么复杂吗，但不知道怎么就突然开了窍，哇，
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/11/CSS 实现动态百分比圆环/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/09/22/TWU那些曾经不认识的单词/">TWU那些曾经不认识的单词</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-09-22T14:32:38.000Z" itemprop="datePublished">
+          2018-09-22
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在TWU（ThoughtWorks University）的这段时间，有一点特别深的感触，那就是单词，很多应该知道却不知道，应该应该见过却没见过的，很多见过但没有记住意思的，很多要是去之前就知道的话，或许能学到的会更多些。
+
+如果知道它们的意思，也不至于因为一两个单词影响整个session的理解，有些可以本理解的东西就那样错过了，有些知道答案的的问题也就那样过去了。
+当然，你完全可以不知道就直接问coach或者小伙伴，都是可以的，但有时
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/09/22/TWU那些曾经不认识的单词/">Read More...</a>
                     </p>
                     
                 </div>
@@ -464,8 +475,8 @@ fish的主页这样说—好了，这是一个为 90 后而生的命令行 shell
         </div>
         
         <nav class="pagination" role="pagination">
-          <a class="pull-left" href="/page/4/">← Newer Posts</a>
-          <a class="pull-right" href="/page/6/">Older Posts →</a>
+          <a class="pull-left" href="/page/9/">← Newer Posts</a>
+          <a class="pull-right" href="/page/11/">Older Posts →</a>
         </nav>
     </div>
 </section>
