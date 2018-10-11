@@ -299,7 +299,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/10/11/与Ruby的第一天/">与Ruby的第一天</a></h3>
+                    <h3><a href="/2018/10/11/由 "sudo" 想到的社会工程学/">由 "sudo" 想到的社会工程学</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-10-11T12:04:16.000Z" itemprop="datePublished">
@@ -312,18 +312,17 @@
                 <div class="col-md-8">
                     <p>
                       
-                        1、学习使我快乐早就听说Ruby这个语言的表达能力是一般的语言不能比的，现在终于有机会见识见识啦，虽然一开始是拒绝的，但古人不常说嘛，学如逆水行舟，不进则退～何况语言都是相通的，那就开始吧
+                        来源于
+其实用了sudo，以后你用npm是以管理员权限执行的，安全性会成问题，当然要配合一些社会工程的手法才能真正触发这个安全漏洞
 
-2、基本用法（与之前学过的比较）
-定义类在 Ruby 中，类总是以关键字 class 开始，后跟类的名称。类名的首字母应该大写，例如
-1class Customer
-
-创建对象下面的实例创建了类 Customer 的两个对象 cust1 和 cus
+1、先不说这个会造成多大的安全性问题，从老师的话中，我想到一个一直在使用的命令但从来没有想过原因的问题—执行apt-get为什么一定要加sudo
+2、安全性指的是什么，社会工程学的手法又是什么
+3、试了试 不加sudo是这样的123apt-get install skypeE: Could not ope
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/10/11/与Ruby的第一天/">Read More...</a>
+                        <a href="/2018/10/11/由 "sudo" 想到的社会工程学/">Read More...</a>
                     </p>
                     
                 </div>
@@ -335,7 +334,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/10/11/我们都一样呐，磕磕绊绊，疼的要命/">我们都一样呐，磕磕绊绊，疼的要命</a></h3>
+                    <h3><a href="/2018/10/11/使用apt-get和nvm安装node的区别/">使用apt-get和nvm安装node的区别</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-10-11T12:04:16.000Z" itemprop="datePublished">
@@ -348,20 +347,49 @@
                 <div class="col-md-8">
                     <p>
                       
-                        ##故事总是动听的谁都不喜欢麻烦，谁都想一帆风顺，谁都想每天遇到的都是贵人。
-就像歌里唱的
+                        初识 apt-get 和 nvm 
+###apt-get
 
-感觉快乐就忙东忙西 感觉累了就放空自己别人说的话随便听一听 自己做决定不想拥有太多情绪 一杯红酒配电影在周末晚上关上了手机 舒服窝在沙发里
-
-可，毕竟，我们每天过的，是生活，谁又不曾磕磕绊绊。
-总要走一些陌生的路，遇到一些陌生的人，听一些陌生的故事，和一些美丽的意外。
-在坚持习惯的这条路上，我遇到了很多人，听到了很多故事，也发生多很多意外。
-无
+是什么在各个平台都有相关的包管理工具，比如 ubuntu 下面有 apt-get，centos 下面有 yum，mac 下面有 brew 等，它们都是安装软件的非常方便的利器，主要用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统
+如何使用 apt-get 安装 node12$ sudo apt-get install nodejs$ sudo apt-get i
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/10/11/我们都一样呐，磕磕绊绊，疼的要命/">Read More...</a>
+                        <a href="/2018/10/11/使用apt-get和nvm安装node的区别/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/11/同学你论文写好了么 | 查重八大法/">同学你论文写好了么 | 查重八大法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-11T12:04:16.000Z" itemprop="datePublished">
+          2018-10-11
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        花开花落，又是一年毕业季，放眼望去，周围的大四狗们都被论文搞的心烦意乱。我也一样的说，憔悴的我，每次等查重结果的时候都是方方的，毕竟毕业要紧啊……
+
+自从上次发了条朋友圈后，就有好几个人发消息问我是在哪里查的，求链接之类的，我想应该还是有人会需要到的吧，刚好自己查的也差不多了，就简单整理下吧，最重要的是给不同的人重复说一个相同的过程也不是一件效率高的事情。
+在网上收集了一下，今天说说可以免费检测论文的几个网站。虽然最终结果会与知网不一定
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/11/同学你论文写好了么 | 查重八大法/">Read More...</a>
                     </p>
                     
                 </div>
@@ -422,41 +450,6 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/10/11/记第一次与外教视频经历，请拿走/">记第一次与外教视频经历，请拿走</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-11T12:04:16.000Z" itemprop="datePublished">
-          2018-10-11
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        ##SORRY由于自己的一些原因，本该上周完成的总结，一直拖到现在，在这里对自己也对大家道歉！
-
-##PRE第一次有兴趣是李佩赏同学在2016年10月12日在卓越女生实验室第一次视频的时候（在这里我想很多人都特别感谢总理把他的外教课免费分享给我们，是的，我们很幸运），真心佩服她，在三十几个人面前跟外教视频，再为她赞一次
-
-回想最近，自己除了最近看的一些英文文档时不时搜些单词外，基本没有记单词，没有读英语，觉得还是因为没有压力了吧(—)
-
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/11/记第一次与外教视频经历，请拿走/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
                     <h3><a href="/2018/10/11/React那些事/">React那些事</a></h3>
                     <span>
                         <span class="post-meta">
@@ -490,7 +483,7 @@ Declarative声明式编程，告诉机器你想要什么（What），让机器�
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/10/11/20岁,有五个女孩.../">20岁,有五个女孩...</a></h3>
+                    <h3><a href="/2018/10/11/记第一次与外教视频经历，请拿走/">记第一次与外教视频经历，请拿走</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-10-11T12:04:16.000Z" itemprop="datePublished">
@@ -503,19 +496,17 @@ Declarative声明式编程，告诉机器你想要什么（What），让机器�
                 <div class="col-md-8">
                     <p>
                       
-                        
-毕业照只用了四秒 却定格了四年的青春
+                        ##SORRY由于自己的一些原因，本该上周完成的总结，一直拖到现在，在这里对自己也对大家道歉！
 
-2013年9月15日，我们相见，到今天2017年6月13日，整整1367天的日子，慢慢地，我们要开始离开，四年，像一场电影，说长也长，说短也短，四年的故事就这样定格了在这拍了不到四秒的照片里。
+##PRE第一次有兴趣是李佩赏同学在2016年10月12日在卓越女生实验室第一次视频的时候（在这里我想很多人都特别感谢总理把他的外教课免费分享给我们，是的，我们很幸运），真心佩服她，在三十几个人面前跟外教视频，再为她赞一次
 
-或许五年，或许十年，我们再见，脸上会带着笑，带着沉默，我想象不到。
-但我知道，20岁的时光里，我们曾给彼此留下了最灿烂的笑容。
-也许我是时光的孩子，总喜欢把一些东西保存下来，包括我们的故事，就像你们总说
+回想最近，自己除了最近看的一些英文文档时不时搜些单词外，基本没有记单词，没有读英语，觉得还是因为没有压力了吧(—)
+
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/10/11/20岁,有五个女孩.../">Read More...</a>
+                        <a href="/2018/10/11/记第一次与外教视频经历，请拿走/">Read More...</a>
                     </p>
                     
                 </div>
@@ -560,7 +551,7 @@ Declarative声明式编程，告诉机器你想要什么（What），让机器�
         
         <nav class="pagination" role="pagination">
           
-          <a class="pull-right" href="/\/page/2/">Older Posts →</a>
+          <a class="pull-right" href="/page/2/">Older Posts →</a>
         </nav>
     </div>
 </section>
