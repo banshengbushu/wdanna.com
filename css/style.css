@@ -660,7 +660,7 @@ nav i.icon-basic-eye {
 
 .lightnav .navbar-inner.lightnav-alt .nav > li > a,
 .lightnav .navbar-inner.lightnav-alt .learnmore {
-    color: #151515;
+    color: #fff;
 }
 
 /* Changes nav background color to white on scroll */
@@ -801,6 +801,14 @@ button.navbar-toggle .icon-bar {
     transition: all ease .2s;
 }
 
+.navbar-toggle .icon-bar+.icon-bar {
+    background-color: #fcf8e3;
+}
+
+a .animsition-link .right-list{
+    color: #888b8c;
+}
+
 html.sb-init.sb-active.sb-active-right,
 html.sb-init.sb-active.sb-active-right #featured a,
 html.sb-init.sb-active.sb-active-right ul.filters li p,
@@ -844,7 +852,7 @@ html.sb-init.sb-active.sb-active-right #projects .filter-item div a {
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 13px
+    font-size: 14px
 }
 
 .sb-slidebar a:hover {
@@ -902,6 +910,10 @@ html.sb-init.sb-active.sb-active-right #projects .filter-item div a {
     border-left: 3px solid; /* Removes transparent colour, so border colour will be the same as link hover colour. */
 }
 
+.sb-slidebar a.right-list {
+    color: #ddd;
+}
+
 /* Sb Dropdown */
 li.sb-toggle-submenu {
     font-weight: 600;
@@ -952,7 +964,7 @@ span.sb-caret { /* Caret Down */
 
 /* Secondary menu-items block, (different text styling) */
 .sb-menu.secondary {
-    padding: 24px 34px;
+    padding: 10px 0 0 20px;
 }
 
 .sb-menu.secondary a {
