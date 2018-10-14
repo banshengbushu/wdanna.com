@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Reflux 实现 hello world | 半生不熟</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="半生不熟">
+    <meta name="author" content="Danna">
+    <meta name="description" content="前端 生活" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="shortcut icon" href="https://image.wdanna.com/avatar/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="半生不熟" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="https://image.wdanna.com/avatar/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">home</a></li>
+            <li><a href="/archive" class="animsition-link" title="archive">Archive</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/DevOps/" class="animsition-link">DevOps<small>(1)</small></a></li>
+				    
+				    <li><a href="/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/Linux/" class="animsition-link">Linux<small>(4)</small></a></li>
+				    
+				    <li><a href="/ThoughtWorks/" class="animsition-link">ThoughtWorks<small>(6)</small></a></li>
+				    
+				    <li><a href="/Web-前端/" class="animsition-link">Web 前端<small>(14)</small></a></li>
+				    
+				    <li><a href="/半夜闹腾的神经元/" class="animsition-link">半夜闹腾的神经元<small>(1)</small></a></li>
+				    
+				    <li><a href="/大学/" class="animsition-link">大学<small>(3)</small></a></li>
+				    
+				    <li><a href="/工具/" class="animsition-link">工具<small>(8)</small></a></li>
+				    
+				    <li><a href="/当学习开始有趣的时候/" class="animsition-link">当学习开始有趣的时候<small>(10)</small></a></li>
+				    
+				    <li><a href="/我读的书并不多/" class="animsition-link">我读的书并不多<small>(9)</small></a></li>
+				    
+				    <li><a href="/有一种踏实是你口中喊我名字/" class="animsition-link">有一种踏实是你口中喊我名字<small>(1)</small></a></li>
+				    
+				    <li><a href="/有一种踏实，是你口中喊我名字/" class="animsition-link">有一种踏实，是你口中喊我名字<small>(1)</small></a></li>
+				    
+				    <li><a href="/每天改变一丢丢-习惯培养/" class="animsition-link">每天改变一丢丢 | 习惯培养<small>(7)</small></a></li>
+				    
+				    <li><a href="/白开水喝出了酒的味道/" class="animsition-link">白开水喝出了酒的味道<small>(14)</small></a></li>
+				    
+				    <li><a href="/社会工程学/" class="animsition-link">社会工程学<small>(1)</small></a></li>
+				    
+				    <li><a href="/黄昏见证了最忠实的信徒/" class="animsition-link">黄昏见证了最忠实的信徒<small>(4)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="https://www.jianshu.com/u/4c0a06c8a1f9" class="animsition-link" title="archive">半生不熟的简书</a></li>
+            <!--<li><a href="/about.html" class="animsition-link" title="about">About</a></li>-->
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container_header">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="https://image.wdanna.com/avatar/logo.jpg" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">半生不熟</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/banshengbushu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/Dannaw_" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/wang.danna.3" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.jianshu.com/u/4c0a06c8a1f9" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="https://weibo.com/3930468927/profile?topnav=1&wvr=6" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-10-14T03:40:52.000Z" itemprop="datePublished">
+          2018-10-14
+      </time>
+    
+</span>
+                <h1>Reflux 实现 hello world</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="初识Reflux"><a href="#初识Reflux" class="headerlink" title="初识Reflux"></a>初识Reflux</h2><ul>
+<li>Reflux  是一个简单的单向数据流应用库，灵感来自于ReactJs Flux</li>
+<li>解决了数据在React 应用中的流动方式及过程</li>
+</ul>
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><ul>
+<li>用 <strong>Reflux</strong> 实现界面渲染 hello world</li>
+</ul>
+<h2 id="分解任务"><a href="#分解任务" class="headerlink" title="分解任务"></a>分解任务</h2><ol>
+<li>使用 React 创建一个组件，在页面渲染出 <em>hello word</em></li>
+<li>安装 Reflux</li>
+<li>创建一个 <strong>Action</strong></li>
+<li>创建一个 <strong>Store</strong>，用来监听<strong> Action </strong>，并且获取 <strong>Action</strong> 传递的 <em>hello world</em></li>
+<li><strong>Store</strong> 将值传递给 <strong>Component</strong>，并且渲染到页面</li>
+<li>将代码上传至 Github</li>
+</ol>
+<h2 id="分步实现任务"><a href="#分步实现任务" class="headerlink" title="分步实现任务"></a>分步实现任务</h2><ul>
+<li>使用 React 创建一个组件，在页面渲染出 <em>hello word</em></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&apos;use strict&apos;;</span><br><span class="line"></span><br><span class="line">import React from &apos;react&apos;;</span><br><span class="line">import &#123;render&#125; from &apos;react-dom&apos;;</span><br><span class="line"></span><br><span class="line">const App = React.createClass(&#123;    </span><br><span class="line">              render:function()&#123;       </span><br><span class="line">                      return &lt;div&gt;                    </span><br><span class="line">                             hello world                </span><br><span class="line">                       &lt;/div&gt;   </span><br><span class="line">     &#125;</span><br><span class="line">&#125;);</span><br><span class="line">render(&lt;App/&gt;, document.getElementById(&quot;content&quot;));</span><br></pre></td></tr></table></figure>
+<p>此时，使用 React 在页面渲染出 <em>hello world</em></p>
+<ul>
+<li><p>安装 Reflux<br> <code>npm install reflux</code></p>
+</li>
+<li><p>创建一个 <strong>action</strong><br><code>const action = Reflux.createActions([&#39;getHello&#39;]);</code></p>
+</li>
+<li><p>创建一个 <strong>store</strong>，用来监听<strong> action </strong>，并且获取 <strong>action</strong> 传递的 <em>hello world</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const store = Reflux.createStore(&#123;    </span><br><span class="line">                   listenables: [action],   </span><br><span class="line">                   onGetHello: function (hello) &#123;      </span><br><span class="line">                               this.trigger(hello);    </span><br><span class="line">                  &#125; </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>使用 <code>listenables</code> 来监听 <strong>action </strong>，使用<code>this.trigger()</code> 来更新数据状态</p>
+<ul>
+<li><strong>store</strong> 将值传递给 <strong>component</strong>，并且渲染到页面<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const App = React.createClass(&#123;   </span><br><span class="line">      mixins: [Reflux.connect(store, &quot;hello&quot;)],  </span><br><span class="line">      componentDidMount: function () &#123;       </span><br><span class="line">            action.getHello(&quot;hello world!&quot;);   </span><br><span class="line">     &#125;,    </span><br><span class="line">     render: function () &#123;       </span><br><span class="line">            return     &lt;div&gt;           </span><br><span class="line">                 &#123;this.state.hello&#125;      </span><br><span class="line">         &lt;/div&gt;   </span><br><span class="line">      &#125;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>使用 <code>mixins</code> 将 <strong>store</strong> 和 component 连接 ，使用<code>action .getHello()</code>调用action</p>
+<ul>
+<li>将代码上传至 github<br><a href="https://github.com/RangelZZZ/reflux-demo" target="_blank" rel="noopener">源代码地址</a></li>
+</ul>
+<h2 id="深入理解Reflux"><a href="#深入理解Reflux" class="headerlink" title="深入理解Reflux"></a>深入理解Reflux</h2><ol>
+<li>三大主要内容<ul>
+<li><strong>Action</strong> 是把数据从应用传到 Store 的有效载荷，是Store 数据的唯一来源，只用来描述“发生了什么”</li>
+<li><strong>Store</strong> 负责封装应用的业务逻辑和数据交互</li>
+<li><strong>Views（controller-views）</strong>是整个App 的 入口，监听Store 的变化以获取新的数据，重新 render 自己及子组件</li>
+</ul>
+</li>
+<li><p>单向数据流<br>    Action ———————&gt; Store ——————&gt; View Component<br>     ^<br>    └───────────────────────────────────┘ </p>
+<p>          数据和操作在三者之间单向流动</p>
+</li>
+<li><p>数据流动问题<br>Reflux 中主要由 Action 和 Store 组成，例：当组件 list 增加 Item 时，会调用Action 某个方法（如addItem（data）并将新的数据当参数传递进去，通过事件机制，数据会传送到 Store 中，Store 可以向服务器发送请求并提交给数据库，数据更新后，再通过事件机制传递到 list 当中，并更新 UI</p>
+</li>
+<li>与 Redux 的区别<ul>
+<li>Reflux 中去除了 Redux 中的 <strong>Dispatch</strong> 和 <strong>Reducer</strong>，保留了 Action 和 Store</li>
+<li>概念关系图对比如下：<br><img src="http://upload-images.jianshu.io/upload_images/3106897-1e94804c19b52810.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Redux概念关系图"><br><img src="http://upload-images.jianshu.io/upload_images/3106897-7ceae309157e18bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reflux概念关系图"></li>
+</ul>
+</li>
+<li>优缺点<ul>
+<li>优点：单向数据流，数据流动方向可以跟踪，追查问题的时候可以跟快捷</li>
+<li>缺点：写起来不太方便。要使UI发生变更就必须创建各种 Action 来维护对应的 State</li>
+</ul>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>学习过程中遇到的问题<ul>
+<li>在开始画思维导图的时候过于注重概念，没有注重实践，浪费了大量时间</li>
+<li>在使用 ReactMixins 时因为找不到 react-mixins 的cdn，花了好长时间</li>
+<li>由于不想使用 <code>ReactMixins.onclass()</code>方法，将 ReactMixins 改成 mixins 花了好长时间</li>
+</ul>
+</li>
+<li>经验<ul>
+<li>以后学习新知识的时候要分清问题的侧重点，确定目标后再分步学习去完成目标</li>
+<li>学习知识要在最开始确定任务范围，尽量不引入别的新知识，增加学习负担</li>
+</ul>
+</li>
+</ol>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/Ruby on rails 环境配置/" style="float: left;">
+        ← Ruby on rails 环境配置
+    </a>
+    
+    
+    <a class="pull-right" href="/Jenkins安装和配置/">
+        Jenkins安装和配置 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Danna. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="http://wdanna.com/" style="color: #767D84">Danna</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/banshengbushu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/Dannaw_" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/wang.danna.3" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.jianshu.com/u/4c0a06c8a1f9" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://weibo.com/3930468927/profile?topnav=1&wvr=6" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
