@@ -73,8 +73,8 @@
         </div>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">home</a></li>
-            <li><a href="/archive" class="animsition-link" title="archive">Archive</a></li>
+            <li><a href="/" class="animsition-link right-list" title="Home">home</a></li>
+            <li><a href="/archive" class="animsition-link right-list" title="archive">Archive</a></li>
             <!-- Dropdown Menu -->
 			 
             
@@ -188,7 +188,7 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2018-10-14T03:49:07.000Z" itemprop="datePublished">
+      <time datetime="2018-10-14T11:46:59.000Z" itemprop="datePublished">
           2018-10-14
       </time>
     
@@ -201,9 +201,9 @@
 <p>在写任何页面之前记得问自己一个问题 — 真的确定看清楚了吗？</p>
 </blockquote>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-def2b905dd6b2ccc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>##要实现的页面<br><img src="http://upload-images.jianshu.io/upload_images/2190281-adb359c7f58f9191.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="mockup"></p>
+<h2 id="要实现的页面"><a href="#要实现的页面" class="headerlink" title="要实现的页面"></a>要实现的页面</h2><p><img src="http://upload-images.jianshu.io/upload_images/2190281-adb359c7f58f9191.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="mockup"></p>
 <p>乍一看挺简单的一张页面，但是写完后和大神交流了下才发现，很多东西是我没有看清楚的，更或者说一些东西只看到了其中的一部分，写完反复感受了下大神提到的需要改进的地方，在这里简单总结了一下。</p>
-<p>##我们想的一样吗<br>有兴趣的可以试试按自己的想法划分一下这个页面，挺好玩的。</p>
+<h2 id="我们想的一样吗"><a href="#我们想的一样吗" class="headerlink" title="我们想的一样吗"></a>我们想的一样吗</h2><p>有兴趣的可以试试按自己的想法划分一下这个页面，挺好玩的。</p>
 <p>按功能块划分大的整体应该是分三部分的，依据有<strong>背景颜色</strong>、<strong>页面功能</strong>、<strong>重复性用户体验</strong>等……</p>
 <p>比如上面这张页面，最开始有彩色背景图片那一部分应该属于Header部分，中间背景色是白色的应该属于页面的主体部分，中间浮起来的那个横条底色是白色的，所以应该和主体部分连在一起的…</p>
 <p>再往下看，按理说最低部的那条白色的应该是footer，但是，再观察下就会发现上面的 Search Bo x和 Header 用的应该是同一套东西，所以从用户体验角度来考虑，根本不需要设计重复的 Search 框来放到页面相对来说比较醒目的部分，所以，自然这部分属于Footer会更合理些。</p>
@@ -214,29 +214,27 @@
 <li><p>Footer<br>Footer部分也就是底部从背景是人物头像开始到完，包括Search Box模块、Navgation模板、Socia Link模块，该模块应该用<code>&lt;footer&gt;</code>标签包起来</p>
 </li>
 </ul>
-<p>##整体的对齐<br>其实在开始之前，要注意观察下整体左右是有个边界线的，从上到下有些部分是有一些缩进了的，其他基本都是对齐的。</p>
+<h2 id="整体的对齐"><a href="#整体的对齐" class="headerlink" title="整体的对齐"></a>整体的对齐</h2><p>其实在开始之前，要注意观察下整体左右是有个边界线的，从上到下有些部分是有一些缩进了的，其他基本都是对齐的。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-21e678134771e513.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <p>还有这里，能看出来上下基本是对齐的，所以纵向所有部分应该在同一个<code>li</code>内的。</p>
 <blockquote>
 <p>同样功能的模块是有一定对齐效果的</p>
 </blockquote>
-<p>##图片的设置<br>就拿背景图片来说吧，一般分两种，一种比设备尺寸大的，一种比设备尺寸小的，前者一般设置<code>background-size</code>为<code>contain</code>来缩小背景图片以完全装入背景区，后者则可以设置为<code>cover</code>拉伸背景图片以完全覆盖背景区。</p>
+<h2 id="图片的设置"><a href="#图片的设置" class="headerlink" title="图片的设置"></a>图片的设置</h2><p>就拿背景图片来说吧，一般分两种，一种比设备尺寸大的，一种比设备尺寸小的，前者一般设置<code>background-size</code>为<code>contain</code>来缩小背景图片以完全装入背景区，后者则可以设置为<code>cover</code>拉伸背景图片以完全覆盖背景区。</p>
 <p>但是。通常给的图片长和宽和你要使用的长宽是不Match的，自然就需要做一些牺牲了—裁剪图片，但是作为一个要写这个页面的人，是需要考虑用户的视觉美感的，我们需要细细品味自己所用图片的内容和美感设计，就比如Header用的背景图，尽量调整图片的位置，让被裁剪掉的图片能保持其中的马路会处在页面整体的中间部分，那这就相对来说自然多了。</p>
-<p>##关于命名<br>经常写的时候，总会纠结在命名的问题上，到底是下划线好还是中划线好呢，其实很多东西已经有人总结成规范了，只是自己不知道而已。</p>
+<h2 id="关于命名"><a href="#关于命名" class="headerlink" title="关于命名"></a>关于命名</h2><p>经常写的时候，总会纠结在命名的问题上，到底是下划线好还是中划线好呢，其实很多东西已经有人总结成规范了，只是自己不知道而已。</p>
 <p>总体来说尽量按功能命名相对合理些，如果命名地太局限，页面稍有改动，就需要多处改动了，所以，尽量保证扩展性和适应性尽可能地高。</p>
 <p>同时尽量遵循三个原则—关注度分离、单一职责、DRY。</p>
 <p>比如说有一个<code>navgation</code>块，命名为<code>.nav</code>，它有一些元素比如<code>item</code>，合理的命名应该是<code>.nav__item</code>，<code>item</code>又有一些属性比如被选中，就应该是中划线的形式—<code>.nav--active</code></p>
 <p>详情请阅读 <a href="http://getbem.com/" target="_blank" rel="noopener">BEM</a> — It is a known fact that the right styleguide can significantly increase development speed, debugging, and the implementation of new features in legacy code. </p>
 <p>还有关于样式的规范，一般应保证选择器简洁，保证一定的重用性等。</p>
 <p>详情请阅读   <a href="http://thesassway.com/intermediate/using-object-oriented-css-with-sass" target="_blank" rel="noopener">OOCSS</a> — make CSS modular and object-based</p>
-<p>##设置透明度</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2190281-e7693f9f6f7cb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>就拿这个框来说，我开始想着是input框设置了<code>opacity</code>，然后<code>placeholder</code>的颜色应该是白色，但是怎么设置都会被盖住，后来又把<code>input</code>框的颜色改成了深色背景，然后能看到比较明显的效果，但跟大神讨论后，才恍然大悟。</p>
+<h2 id="设置透明度"><a href="#设置透明度" class="headerlink" title="设置透明度"></a>设置透明度</h2><p><img src="http://upload-images.jianshu.io/upload_images/2190281-e7693f9f6f7cb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>就拿这个框来说，我开始想着是input框设置了<code>opacity</code>，然后<code>placeholder</code>的颜色应该是白色，但是怎么设置都会被盖住，后来又把<code>input</code>框的颜色改成了深色背景，然后能看到比较明显的效果，但跟大神讨论后，才恍然大悟。</p>
 <p>其实正确的做法是应该给<code>input</code>框的背景设置白色和半透明状态，<code>placeholder</code>的颜色就是白色，原因是设置了<code>opacity</code>的元素，其子元素也会成半透明状态，这就导致设置的<code>placeholder</code>的颜色也是半透明的，所以，应该只给 <code>input</code>框的背景设置白色和相应的半透明状态才是合理的。</p>
-<p>##哪些是伪元素</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2190281-19a7fb9ad4ea2329.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="连接的线"></p>
+<h2 id="哪些是伪元素"><a href="#哪些是伪元素" class="headerlink" title="哪些是伪元素"></a>哪些是伪元素</h2><p><img src="http://upload-images.jianshu.io/upload_images/2190281-19a7fb9ad4ea2329.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="连接的线"></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-317e7a83973d8b5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="title下面的短线"></p>
 <p>像这些暗色的装饰类的元素，内容不太突出的部分，用伪元素实现就相对来说合理些，像第一张图那条横线，给1和2设置伪元素<code>::after</code>肯定比自己写一条线然后裁啊裁，挪啊挪简单而且合理地多。</p>
-<p>##暗色的文本<br>讲真，自己看到暗色的段落的时候，就直接考虑设置透明度了，但其实是不对的，更合理地做法应该是所有看到的浅色的文本或者带有蒙板的图片都是靠颜色来控制的，而不是设置透明度看起来像灰色。</p>
+<h2 id="暗色的文本"><a href="#暗色的文本" class="headerlink" title="暗色的文本"></a>暗色的文本</h2><p>讲真，自己看到暗色的段落的时候，就直接考虑设置透明度了，但其实是不对的，更合理地做法应该是所有看到的浅色的文本或者带有蒙板的图片都是靠颜色来控制的，而不是设置透明度看起来像灰色。</p>
 <p><strong>我是半生不熟 喜欢照自己的怪念头行事<br>喜欢一切意外 想把生活过成诗的样子<br>若哪天有幸相遇 请别诧异 其实我并不是个乖孩子</strong></p>
 
             <div class="clearfix"></div>
@@ -244,13 +242,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/想不清楚，就先试试看吧/" style="float: left;">
-        ← 想不清楚，就先试试看吧
+    <a class="pull-left" href="/Jenkins安装和配置/" style="float: left;">
+        ← Jenkins安装和配置
     </a>
     
     
-    <a class="pull-right" href="/我们都一样呐，磕磕绊绊，疼的要命/">
-        我们都一样呐，磕磕绊绊，疼的要命 →
+    <a class="pull-right" href="/React那些事/">
+        React那些事 →
     </a>
     
 </nav>

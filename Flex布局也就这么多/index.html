@@ -73,8 +73,8 @@
         </div>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">home</a></li>
-            <li><a href="/archive" class="animsition-link" title="archive">Archive</a></li>
+            <li><a href="/" class="animsition-link right-list" title="Home">home</a></li>
+            <li><a href="/archive" class="animsition-link right-list" title="archive">Archive</a></li>
             <!-- Dropdown Menu -->
 			 
             
@@ -188,7 +188,7 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2018-10-14T05:21:19.000Z" itemprop="datePublished">
+      <time datetime="2018-10-14T11:46:59.000Z" itemprop="datePublished">
           2018-10-14
       </time>
     
@@ -207,14 +207,14 @@
 <li>还有一些内容的伸缩，等分等问题</li>
 </ul>
 <p><strong>我觉得最主要的一点就是简化了样式的编写，同样实现一个复杂的需求，之前用CSS可能得编写一大堆代码，但是用flex可能几行就实现了</strong></p>
-<p>##是什么<br>flex的全称是<code>Flexible Box</code>，是2009年<code>W3C</code>提出的一个布局概念，目的是简便、完整、响应式地实现各种页面的布局。</p>
+<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><p>flex的全称是<code>Flexible Box</code>，是2009年<code>W3C</code>提出的一个布局概念，目的是简便、完整、响应式地实现各种页面的布局。</p>
 <p>画了张flex从工作草案到候选的的大事年表<br><img src="http://upload-images.jianshu.io/upload_images/2190281-78be66b0a95bf60c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <p>要注意的一点：</p>
 <ul>
 <li>设为 flex 布局以后，子元素的<code>floa</code>t、<code>clear</code>和<code>vertical-align</code>属性将失效</li>
 <li>flex布局默认是首行左对齐<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2>理解flex中有几个概念很重要，像下图，如果是用翻译，注意是侧轴，不要老说纵轴，是主轴，不要老说横轴，因为代表的意义不一样。<br><img src="http://upload-images.jianshu.io/upload_images/2190281-ee0593505e66fbd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
 </ul>
-<p>##如何使用<br>使用flex很简单，只用设置display属性为flex就可以，像下面这样：<br><img src="http://upload-images.jianshu.io/upload_images/2190281-a1fc0af170342e3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>使用flex很简单，只用设置display属性为flex就可以，像下面这样：<br><img src="http://upload-images.jianshu.io/upload_images/2190281-a1fc0af170342e3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 <p><strong>自己写了一个Demo，建议，打开demo，可边看边试，会理解的特别快，点击<a href="https://banshengbushu.github.io/flex-demo/" target="_blank" rel="noopener">在线演示</a>可修改样式</strong></p>
 <h2 id="Container的属性（6个）"><a href="#Container的属性（6个）" class="headerlink" title="Container的属性（6个）"></a>Container的属性（6个）</h2><p>从概念图可以看出，flex布局有两个最大的概念也就是container和item，所以相应地所有属性也只对这两个元素起作用的，下来介绍container的属性，当然前提是container设置了<code>display: flex</code></p>
 <ul>
@@ -322,7 +322,7 @@
 <blockquote>
 <p>align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性, 默认值为auto, 取值和container的align-items属性一致</p>
 </blockquote>
-<p>##浏览器的兼容性<br>在<a href="https://caniuse.com/" target="_blank" rel="noopener">这里</a>查询，可以看到已被大多数浏览器支持</p>
+<h2 id="浏览器的兼容性"><a href="#浏览器的兼容性" class="headerlink" title="浏览器的兼容性"></a>浏览器的兼容性</h2><p>在<a href="https://caniuse.com/" target="_blank" rel="noopener">这里</a>查询，可以看到已被大多数浏览器支持</p>
 <p>参考：<br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="noopener">Flex 布局教程—实例篇</a><br><a href="https://www.w3cplus.com/css3/a-guide-to-flexbox-new.html" target="_blank" rel="noopener">一个完成的flexbox指南</a></p>
 
             <div class="clearfix"></div>
@@ -330,13 +330,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/不知道最近怎么了/" style="float: left;">
-        ← 不知道最近怎么了
+    <a class="pull-left" href="/用自己的钱给妈妈买东西的感觉老爽了/" style="float: left;">
+        ← 用自己的钱给妈妈买东西的感觉老爽了
     </a>
     
     
-    <a class="pull-right" href="/还记得2017那声再见.../">
-        还记得2017那声再见... →
+    <a class="pull-right" href="/还记得八年前你跟一个女生交换过一幅画吗/">
+        还记得八年前你跟一个女生交换过一幅画吗.md →
     </a>
     
 </nav>

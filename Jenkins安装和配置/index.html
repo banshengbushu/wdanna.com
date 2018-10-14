@@ -73,8 +73,8 @@
         </div>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">home</a></li>
-            <li><a href="/archive" class="animsition-link" title="archive">Archive</a></li>
+            <li><a href="/" class="animsition-link right-list" title="Home">home</a></li>
+            <li><a href="/archive" class="animsition-link right-list" title="archive">Archive</a></li>
             <!-- Dropdown Menu -->
 			 
             
@@ -188,7 +188,7 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2018-10-14T03:40:09.000Z" itemprop="datePublished">
+      <time datetime="2018-10-14T11:46:59.000Z" itemprop="datePublished">
           2018-10-14
       </time>
     
@@ -197,7 +197,7 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>##一、作用<br>项目中一直在用<code>Jenkins</code>，但自己对这部分的开发参与的不是很多，最近准备毕设的时候才开始慌了，倒腾了大半天，之前也有人问我，就准备整理了下相关知识，也便以后回顾。</p>
+      		<h2 id="一、作用"><a href="#一、作用" class="headerlink" title="一、作用"></a>一、作用</h2><p>项目中一直在用<code>Jenkins</code>，但自己对这部分的开发参与的不是很多，最近准备毕设的时候才开始慌了，倒腾了大半天，之前也有人问我，就准备整理了下相关知识，也便以后回顾。</p>
 <p>我们在做项目的时候简单来说一般会有这五个步骤，<strong>开发—&gt;提交—&gt;编译—&gt;测试—&gt;部署</strong>。人工的流程走就是把项目同步到<code>Git</code>，再用 <code>SSH</code> 登录服务器把项目<code>pull</code>下来，再<code>migrate</code>数据库，运行单元测试和迁移静态资源，项目每天都会有若干个<code>commit</code>，在多人开发中带来许多的不便。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-7b40d6e8d66d6c15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Jenkins管家"></p>
 <p>为了减轻人为的操作，就可以使用<code>Jenkins</code>来对项目进行持续集成。它可以帮你在写完代码后，一键完成开发过程中的一系列工作，就比如上面五个步骤中，除了第一步，后续的四步都可以自动化完成。具体的，当你完成了提交，Jenkins会自动运行你的编译脚本，编译成功后，再运行你的测试脚本，这一步成功后，接着它会帮你把新程序发布出去，完成部署。</p>
@@ -205,7 +205,7 @@
 <p>Jenkins是一个持续集成工具，如大家所说相当于一个调度平台，如果你的目的只是自动化部署的话，直接自己写脚本或者用<code>Ansible</code>、<code>Salt</code>、<code>Puppet</code>、<code>Chef</code>、<code>Fabric</code>等自动化部署工具就行如果你是想在<code>job</code>中加入自动话部署流程的话，可以先写好自动化部署脚本然后在<code>Jenkins</code>构建任务的<code>Execute Shell</code>中调用相应的<code>Script</code>。</p>
 </blockquote>
 <p>重复单一易出错的操作将慢慢被机器所取代，具体到软件开发中就是，每次打包送测等操作是可以交给机器去自动执行的。以前打包给测试的流程是，测试拿了好几个手机过来，开发一一安装，然后送给测试慢慢测试。使用了持续集成之后将变成，开发本地提交代码，Jenkins等持续集成工具监测到代码变化，自动编译打包，生成开发包，测试直接拿着开发包安装测试即可。Jenkins做的操作其实很简单，它只是将我们平时做的每一步重复的操作自动化了而已。</p>
-<p>##二、安装（ubuntu16.04）<br><em><code>Jenkins</code>是开源的,使用<code>Java</code>编写的持续集成的工具</em><br>首先需要先安装<code>Java</code>，再执行以下步骤</p>
+<h2 id="二、安装（ubuntu16-04）"><a href="#二、安装（ubuntu16-04）" class="headerlink" title="二、安装（ubuntu16.04）"></a>二、安装（ubuntu16.04）</h2><p><em><code>Jenkins</code>是开源的,使用<code>Java</code>编写的持续集成的工具</em><br>首先需要先安装<code>Java</code>，再执行以下步骤</p>
 <ul>
 <li><p>添加LTS版本PPA</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | sudo apt-key add -</span><br><span class="line">$ sudo sh -c &apos;echo deb http://pkg.jenkins-ci.org/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list&apos;</span><br></pre></td></tr></table></figure>
@@ -236,8 +236,7 @@
 <li><p>Jenkins安装向导成功完成后，就可以看到这个页面啦<br><img src="http://upload-images.jianshu.io/upload_images/2190281-c6dff5b5813401af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="weblcome.png"></p>
 </li>
 </ul>
-<p>##三、安装插件</p>
-<p><code>Jenkins</code>提供了非常多的插件，几乎你想要的插件全有，前提是你能找的到~官网提供了插件搜索功能，选择<code>Plugins</code>页就可以各种搜索了。<br><img src="http://upload-images.jianshu.io/upload_images/2190281-9f9847b0a103b368.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="manage jenkins"></p>
+<h2 id="三、安装插件"><a href="#三、安装插件" class="headerlink" title="三、安装插件"></a>三、安装插件</h2><p><code>Jenkins</code>提供了非常多的插件，几乎你想要的插件全有，前提是你能找的到~官网提供了插件搜索功能，选择<code>Plugins</code>页就可以各种搜索了。<br><img src="http://upload-images.jianshu.io/upload_images/2190281-9f9847b0a103b368.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="manage jenkins"></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-5c4dc2562e6789b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="plugins"></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-a98ce285d172371f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="search plugins"></p>
 <p>安装完成之后重启<code>Jenkins</code></p>
@@ -259,13 +258,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/Ruby on rails 环境配置/" style="float: left;">
-        ← Ruby on rails 环境配置
+    <a class="pull-left" href="/试了六天GTD的我/" style="float: left;">
+        ← 试了六天GTD的我
     </a>
     
     
-    <a class="pull-right" href="/HTML 那些事儿/">
-        HTML 那些事儿 →
+    <a class="pull-right" href="/动手前记得问自己一个问题/">
+        动手前记得问自己一个问题 →
     </a>
     
 </nav>

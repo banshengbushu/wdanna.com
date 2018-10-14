@@ -688,8 +688,17 @@ nav i.icon-basic-eye {
 
 .lightnav .navbar-inner.lightnav-alt .nav > li > a,
 .lightnav .navbar-inner.lightnav-alt .learnmore {
-    color: #151515;
+    color: #fff;
 }
+
+.navbar-toggle .icon-bar+.icon-bar {
+    background-color: #fff;
+}
+
+.navbar-toggle span.icon-bar.before {
+    background-color: #fff;
+}
+
 
 /* Changes nav background color to white on scroll */
 .navbar-inner.lightnav-alt {
@@ -757,7 +766,7 @@ nav i.icon-basic-eye {
     padding-right: 74px;
     top: 14px;
     z-index: 1060;
-    color: #151515;
+    color: #fff;
     font-family: 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -878,7 +887,7 @@ html.sb-init.sb-active.sb-active-right #projects .filter-item div a {
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 13px
+    font-size: 14px
 }
 
 .sb-slidebar a:hover {
@@ -887,7 +896,7 @@ html.sb-init.sb-active.sb-active-right #projects .filter-item div a {
 
 /* Off-canvas menu items */
 .sb-menu {
-    padding: 34px 34px 24px;
+    padding: 0 10px 0 20px;
     margin: 0;
     list-style-type: none;
 }
@@ -986,7 +995,7 @@ span.sb-caret { /* Caret Down */
 
 /* Secondary menu-items block, (different text styling) */
 .sb-menu.secondary {
-    padding: 24px 34px;
+    padding: 10px 0 0 20px;
 }
 
 .sb-menu.secondary a {
