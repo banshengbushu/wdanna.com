@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>究竟要不要分组，我们讨论了两周 | 半生不熟</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="半生不熟">
+    <meta name="author" content="Danna">
+    <meta name="description" content="前端 生活" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="shortcut icon" href="https://image.wdanna.com/avatar/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="半生不熟" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="https://image.wdanna.com/avatar/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link right-list" title="Home">home</a></li>
+            <li><a href="/archive" class="animsition-link right-list" title="archive">Archive</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/DevOps/" class="animsition-link">DevOps<small>(1)</small></a></li>
+				    
+				    <li><a href="/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/Linux/" class="animsition-link">Linux<small>(4)</small></a></li>
+				    
+				    <li><a href="/ThoughtWorks/" class="animsition-link">ThoughtWorks<small>(6)</small></a></li>
+				    
+				    <li><a href="/Web-前端/" class="animsition-link">Web 前端<small>(14)</small></a></li>
+				    
+				    <li><a href="/半夜闹腾的神经元/" class="animsition-link">半夜闹腾的神经元<small>(1)</small></a></li>
+				    
+				    <li><a href="/大学/" class="animsition-link">大学<small>(3)</small></a></li>
+				    
+				    <li><a href="/工具/" class="animsition-link">工具<small>(8)</small></a></li>
+				    
+				    <li><a href="/当学习开始有趣的时候/" class="animsition-link">当学习开始有趣的时候<small>(10)</small></a></li>
+				    
+				    <li><a href="/我读的书并不多/" class="animsition-link">我读的书并不多<small>(9)</small></a></li>
+				    
+				    <li><a href="/有一种踏实是你口中喊我名字/" class="animsition-link">有一种踏实是你口中喊我名字<small>(1)</small></a></li>
+				    
+				    <li><a href="/有一种踏实，是你口中喊我名字/" class="animsition-link">有一种踏实，是你口中喊我名字<small>(1)</small></a></li>
+				    
+				    <li><a href="/每天改变一丢丢-习惯培养/" class="animsition-link">每天改变一丢丢 | 习惯培养<small>(7)</small></a></li>
+				    
+				    <li><a href="/白开水喝出了酒的味道/" class="animsition-link">白开水喝出了酒的味道<small>(14)</small></a></li>
+				    
+				    <li><a href="/社会工程学/" class="animsition-link">社会工程学<small>(1)</small></a></li>
+				    
+				    <li><a href="/黄昏见证了最忠实的信徒/" class="animsition-link">黄昏见证了最忠实的信徒<small>(4)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="https://www.jianshu.com/u/4c0a06c8a1f9" class="animsition-link" title="半生不熟的简书">半生不熟的简书</a></li>	            <li><a href="https://www.jianshu.com/u/4c0a06c8a1f9" target="_blank"  title="半生不熟的简书">半生不熟的简书</a></li>
+            <li><a href="/atom.xml" target="_blank" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container_header">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="https://image.wdanna.com/avatar/logo.jpg" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">半生不熟</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/banshengbushu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/Dannaw_" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/wang.danna.3" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            
+                            <li><a href="https://weibo.com/3930468927/profile?topnav=1&wvr=6" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-10-14T12:46:44.000Z" itemprop="datePublished">
+          2018-10-14
+      </time>
+    
+</span>
+                <h1>究竟要不要分组，我们讨论了两周</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="一周前"><a href="#一周前" class="headerlink" title="一周前"></a>一周前</h2><p>眼看第一个月挑战已经步入尾声，关于三周前提到的一些问题和三周内遇到的一些问题，很多需要重新商量改进制度的，我看大家最近都挺忙的额，也没什么动静，就把我的一些想法写了下来，分别找其他三个人商量了下。此时大家的想法是分别是这样的</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-82edc97f3b3b53f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我也很惆怅"></p>
+<blockquote>
+<p>我想到了这些问题</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-547a743198b2ceac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p>喜无忧先回复了答案</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-7f906c4eb1de5b95.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-b82d1311c4a56bf8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-e905624261d8aae6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-1a9b1261de782afb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>画出来后更加明确了我的想法，但还是很方。<br>其实越来越觉得他曾经说过的那句话很有道理，也很感激。</p>
+<blockquote>
+<p><strong>“你可以随时来问我问题，我也会告诉你答案，但我是不会告诉你要怎么做的”</strong></p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-140aaa398086cd5b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="画出来也清晰多了"></p>
+<blockquote>
+<p>琪琪给出的想法—不分群</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-d252e104b38d399c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-e0a33f8ea1f3f7b9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-0621309a9ca3a167.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p>郭茹给出的想法—分三个群</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-014039436c1b9442.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-015cfdfbfd509bdd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-fe28035f553151a9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-0782436bdac3150a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-c50b5017d6e572c6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="她很快就给了我图"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-2b43b4e4a6e16729.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>我也及时反馈了我的意见给她。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-98a195e366955c9b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p> <strong>为什么这次开始我没有在群里聊呢？我觉得单独谈的好处是一开始不会受别人观点的影响，更能激发大家的想法，也不会出现那种没有及时看手机错过了讨论时间，最后不好意思再在群里说话的情况。</strong></p>
+<p><strong>但最终还是要一块说话的，因为意见并没有统一，各有各的观点，所以我们约好了一个时间进行了一个小时的线上讨论。</strong></p>
+<h2 id="线上讨论"><a href="#线上讨论" class="headerlink" title="线上讨论"></a>线上讨论</h2><p><strong>讨论完后关于红包管理意见谈的很一致，但关于究竟要不要分群的想法仍然没有统一，但也分析了更多的情况，也明确了不少。但我又不喜欢强制性的要求别人同意什么，总觉得既然同意了大家就要团结起来，一致朝个方向努力，快结束的时候说了句：“要不我建个金数据吧，既然我们不能统一，就去听听大家的想法吧，也是个参考。大家也都说好。</strong></p>
+<p>接着，开始收集大家的意见了，本来计划是一天的，但其实并没有那么简单，通过各管理员的不断提醒，和我后来单独私聊，终于填了三十多个人。最终大家的意见是这样的。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-3df92699d0f0d31a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="其实应该是分两个群的比三个群的少一个人的，由于我当初也填了表.png"></p>
+<p>其实乍一看，答案很明确了，但是我又仔细看了看写的理由那一栏，觉得还是有必要再整理商量一下的。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-38ba150afd19fcdf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="是否分群—大家的建议"></p>
+<p>今天很早就睡不着了，我就又去烦大家了，说今天咱们抽空再商量下吧，咱们要尽快了，不能超过明天了。</p>
+<p>郭茹很快回复了我的消息，也给了我不少动力。</p>
+<h2 id="终于敲定了"><a href="#终于敲定了" class="headerlink" title="终于敲定了"></a>终于敲定了</h2><p>我们又一次地回到这个棘手的问题了，其实最近在看关键对话对我影响挺大的，也冷静了不少，但认真来看，这次对话很多次已经到了危险的边缘，但我很感谢大家都坚持了下来。</p>
+<p>感觉得这些都是有价值的，具体是什么又说不出来，就想自己应该记下来，等一个月再回过头来看看，或者等个五年八年再回过头看看，想看看那时候我的想法还是现在这样吗。</p>
+<blockquote>
+<p>一开始是这样的</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-e5cf64ba54302b19.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="早上一大早就睡不着了"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-81361c1cb3e19128.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-47e9deb17b4a308b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>很明显，大家还是各有各的想法，但让我很惊讶的是，琪琪这次给的答案是分群，有些说不清楚的感觉。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-fae52c4c72dadeff.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><strong>到这时候我已经感觉到结果了，但我告诉自己这次不能再像上次那样了，到最后还是讨论不出来什么结果，因为没有时间了。</strong></p>
+<p><strong>还好我机智，想到了一个办法，“要不我再拉个人进来吧！”</strong></p>
+<p><strong>因为之前也主动给了我很多意见，就想让他跟我们一起商量商量，就把箫哥拉进来了，情况这才有了些改观</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-cb9e4af9124c6229.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-2244be315d202141.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-43c9a9744ed541f8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-6b87478f09ba2313.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-8debbdb6781f7353.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-2cf53dfb5fcc3e21.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>恩，其实这时候我纠结了一分钟，到底是继续讨论下去说服一个人呢，还是放弃，就按大家的想法呢？我看了看时间，终于决定了，其实没有谁对谁错，再说下去只能是耗费更多时间罢了，我们可以等一个月再来看这个问题，用事实说话。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-276ee6e3df1eb6ba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>终于体会到了每一个决策的不容易，但不得不承认的是的确很好玩，还是觉得一句话挺有道理。</p>
+<blockquote>
+<p><strong>每个决定都没有对与错，只是在某种情况下合不合适罢了</strong></p>
+</blockquote>
+<p><strong>我是半生不熟 喜欢照自己的怪念头行事<br>喜欢一切意外 想把生活过成诗的样子<br>若哪天有幸相遇 请别诧异 其实我并不是个乖孩子</strong></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/神奇的 Linux 命令行/" style="float: left;">
+        ← 神奇的 Linux 命令行
+    </a>
+    
+    
+    <a class="pull-right" href="/终于知道我为什么总忘记收被子了/">
+        终于知道我为什么总忘记收被子了 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Danna. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="http://wdanna.com/" style="color: #767D84">Danna</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/banshengbushu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/Dannaw_" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/wang.danna.3" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    <li><a href="https://weibo.com/3930468927/profile?topnav=1&wvr=6" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
