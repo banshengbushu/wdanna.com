@@ -220,7 +220,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/不能永远忽略的Accessibility (上)/">不能永远忽略的 Accessibility (上)</a></h3>
+                    <h3><a href="/不能永远忽略的Accessibility(上)/">不能永远忽略的 Accessibility (上)</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-10-22T15:42:12.000Z" itemprop="datePublished">
@@ -240,7 +240,7 @@
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/不能永远忽略的Accessibility (上)/">Read More...</a>
+                        <a href="/不能永远忽略的Accessibility(上)/">Read More...</a>
                     </p>
                     
                 </div>
@@ -335,7 +335,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/20岁,有五个女孩.../">20岁,有五个女孩...</a></h3>
+                    <h3><a href="/Flex布局也就这么多/">Flex布局也就这么多</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-10-14T12:46:44.000Z" itemprop="datePublished">
@@ -348,19 +348,98 @@
                 <div class="col-md-8">
                     <p>
                       
-                        
-毕业照只用了四秒 却定格了四年的青春
+                        还清楚记得第一次用Flex实现了垂直居中的时候，我那各种unbelievable的心情，然后就深深喜欢上了这个好玩的东西
 
-2013年9月15日，我们相见，到今天2017年6月13日，整整1367天的日子，慢慢地，我们要开始离开，四年，像一场电影，说长也长，说短也短，四年的故事就这样定格了在这拍了不到四秒的照片里。
+为什么出现关于Flex布局的出现解决了的问题，个人总结了以下几点原因。
+先看看到现在WEB布局的一个发展吧
 
-或许五年，或许十年，我们再见，脸上会带着笑，带着沉默，我想象不到。
-但我知道，20岁的时光里，我们曾给彼此留下了最灿烂的笑容。
-也许我是时光的孩子，总喜欢把一些东西保存下来，包括我们的故事，就像你们总说
+传统的布局都是基于盒模型，然后设置各种display和position，必要时再加上相应地float，想必写过CSS的同学都感受到过，实现一些复杂的布局会非常不方便，有时候自己写的样式，过段时间看都不敢相信
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/20岁,有五个女孩.../">Read More...</a>
+                        <a href="/Flex布局也就这么多/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/Git 入门篇/">Git 入门篇</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-14T12:46:44.000Z" itemprop="datePublished">
+          2018-10-14
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1、读音本人一直对技术词汇的发音有不可描述的强迫症现象，所以还是先来聊一聊它的发音。
+
+曾经偶尔不止一次地听到身边有人看着Git叫“鸡特”（谐音），从一开始的满脸懵逼到最后竟笑出了声…我觉得作为一个程序不管是猿还是媛，为了避免引起其他猿或者是媛莫名发笑，为了避=避免被一群诧异的眼光注视，为了避免在跟别人讨论技术问题的时候被人揪着发音不放，还是确保你的发音准确吧。
+ 忘掉“鸡特”，记住“给特”！
+2、起源
+同生活中的许多伟大事物一样，Gi
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/Git 入门篇/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/CSS 实现动态百分比圆环/">CSS 实现动态百分比圆环</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-14T12:46:44.000Z" itemprop="datePublished">
+          2018-10-14
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        #效果展示没掌握上传动图的操作，这里就先截静态图吧
+
+
+#实现思路
+
+自己的思路
+
+一开始看到这个图的时候，想着应该不难
+
+外面一个div，里面一个div，一个背景深蓝色，一个背景白色
+蓝色的div加一个伪元素，背景浅蓝色，再裁剪一半
+
+还是先试试，写着写着发现中间各种设置四周边距，才让中间div居中，我都看不下去了
+
+参考了别人的思路
+
+看了有很多例子，一开始没看懂的时候，觉得都写的什么呀，有这么复杂吗，但不知道怎么就突然开了窍，哇，
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/CSS 实现动态百分比圆环/">Read More...</a>
                     </p>
                     
                 </div>
@@ -425,82 +504,6 @@ There are two versions of the
                     
                     <p class="pull-right readMore">
                         <a href="/Pecha Kucha -- Constellations/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/Reflux 实现 hello world/">Reflux 实现 hello world</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-14T12:46:44.000Z" itemprop="datePublished">
-          2018-10-14
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        初识Reflux
-Reflux  是一个简单的单向数据流应用库，灵感来自于ReactJs Flux
-解决了数据在React 应用中的流动方式及过程
-
-需求分析
-用 Reflux 实现界面渲染 hello world
-
-分解任务
-使用 React 创建一个组件，在页面渲染出 hello word
-安装 Reflux
-创建一个 Action
-创建一个 Store，用来监听 Action ，并且获取 Action 传递的 hello worl
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/Reflux 实现 hello world/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/Git 入门篇/">Git 入门篇</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-14T12:46:44.000Z" itemprop="datePublished">
-          2018-10-14
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1、读音本人一直对技术词汇的发音有不可描述的强迫症现象，所以还是先来聊一聊它的发音。
-
-曾经偶尔不止一次地听到身边有人看着Git叫“鸡特”（谐音），从一开始的满脸懵逼到最后竟笑出了声…我觉得作为一个程序不管是猿还是媛，为了避免引起其他猿或者是媛莫名发笑，为了避=避免被一群诧异的眼光注视，为了避免在跟别人讨论技术问题的时候被人揪着发音不放，还是确保你的发音准确吧。
- 忘掉“鸡特”，记住“给特”！
-2、起源
-同生活中的许多伟大事物一样，Gi
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/Git 入门篇/">Read More...</a>
                     </p>
                     
                 </div>
