@@ -17,20 +17,20 @@
 <!--<![endif]-->
 
 <head>
-  <title>HTML 那些事儿 | 半生不熟</title>
+  <title>HTML 那些事儿 | 半生不熟 | 前端开发</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="半生不熟">
+    <meta name="generator" content="半生不熟 | 前端开发">
     <meta name="author" content="Danna">
-    <meta name="description" content="前端 生活" />
+    <meta name="description" content="前端开发 生活分享" />
     <meta name="keywords" content="" />
 
     <!-- Favicon, (keep icon in root folder) -->
     <link rel="shortcut icon" href="https://image.wdanna.com/avatar/favicon.ico" type="image/ico">
 
-    <link rel="alternate" href="/atom.xml" title="半生不熟" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="半生不熟 | 前端开发" type="application/atom+xml">
     <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
     
     <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/ThoughtWorks/" class="animsition-link">ThoughtWorks<small>(6)</small></a></li>
 				    
-				    <li><a href="/Web-前端/" class="animsition-link">Web 前端<small>(18)</small></a></li>
+				    <li><a href="/Web-前端/" class="animsition-link">Web 前端<small>(15)</small></a></li>
 				    
 				    <li><a href="/半夜闹腾的神经元/" class="animsition-link">半夜闹腾的神经元<small>(1)</small></a></li>
 				    
@@ -102,9 +102,7 @@
 				    
 				    <li><a href="/我读的书并不多/" class="animsition-link">我读的书并不多<small>(9)</small></a></li>
 				    
-				    <li><a href="/有一种踏实是你口中喊我名字/" class="animsition-link">有一种踏实是你口中喊我名字<small>(1)</small></a></li>
-				    
-				    <li><a href="/有一种踏实，是你口中喊我名字/" class="animsition-link">有一种踏实，是你口中喊我名字<small>(1)</small></a></li>
+				    <li><a href="/有一种踏实是你口中喊我名字/" class="animsition-link">有一种踏实是你口中喊我名字<small>(2)</small></a></li>
 				    
 				    <li><a href="/每天改变一丢丢-习惯培养/" class="animsition-link">每天改变一丢丢 | 习惯培养<small>(7)</small></a></li>
 				    
@@ -149,7 +147,7 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link">半生不熟</a></li>
+                            <li><a href="/" class="animsition-link">半生不熟 | 前端开发</a></li>
                             <li class="nolink"><span>Always </span>Creative.</li>
                             
                             <li><a href="https://github.com/banshengbushu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
@@ -187,8 +185,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2018-12-03T03:31:21.799Z" itemprop="datePublished">
-          2018-12-03
+      <time datetime="2019-01-16T15:21:49.502Z" itemprop="datePublished">
+          2019-01-16
       </time>
     
 </span>
@@ -196,22 +194,17 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>###1、第一个需求</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2190281-3b033c3e71a07603.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="HTML—列表"></p>
-<p>###我的思考</p>
-<ul>
+      		<h3 id="1、第一个需求"><a href="#1、第一个需求" class="headerlink" title="1、第一个需求"></a>1、第一个需求</h3><p><img src="http://upload-images.jianshu.io/upload_images/2190281-3b033c3e71a07603.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="HTML—列表"></p>
+<h3 id="我的思考"><a href="#我的思考" class="headerlink" title="我的思考"></a>我的思考</h3><ul>
 <li>最外层的是两个<strong>无序列表</strong>（<code>&lt;ul&gt;标签</code>）</li>
 <li>靠近最外层的分别是两个<strong>有序列表（<code>&lt;ol&gt;标签</code>）</strong></li>
 <li>最里层的也是<strong>无序列表</strong>（<code>&lt;ul&gt;标签</code>），这里应有一个<code>type=“square”</code>的属性</li>
 <li>所有列表项目都需要使用<code>&lt;li&gt; 标签</code></li>
 </ul>
-<p>###实现效果</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2190281-1f274004267dfa07.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我的效果"></p>
-<p>###错误纠正<br>对于开始理解的无序列表添加<code>type=“square”</code>的属性那块，在这里是不需要加的，因为默认的无序列表的嵌套结构是这样的，<br><img src="http://upload-images.jianshu.io/upload_images/2190281-0f48022a360ed071.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="从第三层开始默认的样式就是`square`，所以不用加样式"><br>实现代码请访问我的 <a href="https://github.com/banshengbushu/HTML_BASIC/blob/master/html-list.html" target="_blank" rel="noopener">Github</a></p>
-<p>###3、第二个需求</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2190281-a065ded03c3dd373.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="HTML-表格"></p>
-<p>###我的思考</p>
-<ul>
+<h3 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="http://upload-images.jianshu.io/upload_images/2190281-1f274004267dfa07.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我的效果"></p>
+<h3 id="错误纠正"><a href="#错误纠正" class="headerlink" title="错误纠正"></a>错误纠正</h3><p>对于开始理解的无序列表添加<code>type=“square”</code>的属性那块，在这里是不需要加的，因为默认的无序列表的嵌套结构是这样的，<br><img src="http://upload-images.jianshu.io/upload_images/2190281-0f48022a360ed071.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="从第三层开始默认的样式就是`square`，所以不用加样式"><br>实现代码请访问我的 <a href="https://github.com/banshengbushu/HTML_BASIC/blob/master/html-list.html" target="_blank" rel="noopener">Github</a></p>
+<h3 id="3、第二个需求"><a href="#3、第二个需求" class="headerlink" title="3、第二个需求"></a>3、第二个需求</h3><p><img src="http://upload-images.jianshu.io/upload_images/2190281-a065ded03c3dd373.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="HTML-表格"></p>
+<h3 id="我的思考-1"><a href="#我的思考-1" class="headerlink" title="我的思考"></a>我的思考</h3><ul>
 <li>表格分为标题（<code>&lt;caption&gt;标签</code>）和表格主体内容部分（5行4列）</li>
 <li>表格主体内容部分首先要有边框（设置<code>border</code>属性）</li>
 <li>表格相关的标签有<ul>
@@ -223,12 +216,10 @@
 </ul>
 </li>
 </ul>
-<p>###实现效果</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2190281-4bf3ab76312c50fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我的表格"></p>
+<h3 id="实现效果-1"><a href="#实现效果-1" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="http://upload-images.jianshu.io/upload_images/2190281-4bf3ab76312c50fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我的表格"></p>
 <p>实现代码请访问我的<a href="https://github.com/banshengbushu/HTML_BASIC/blob/master/html-table.html" target="_blank" rel="noopener">Github</a></p>
-<p>###2、第三个需求<br><img src="http://upload-images.jianshu.io/upload_images/2190281-0ecab4110fd8daf9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="HTML-UML试卷"></p>
-<p>###我的思考</p>
-<ul>
+<h3 id="2、第三个需求"><a href="#2、第三个需求" class="headerlink" title="2、第三个需求"></a>2、第三个需求</h3><p><img src="http://upload-images.jianshu.io/upload_images/2190281-0ecab4110fd8daf9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="HTML-UML试卷"></p>
+<h3 id="我的思考-2"><a href="#我的思考-2" class="headerlink" title="我的思考"></a>我的思考</h3><ul>
 <li>大致浏览下，应分为7部分—标题、卷头、一～五个大题</li>
 <li>看着卷子，要想到会使用到的标签<ul>
 <li><code>&lt;h1&gt;</code>—标题</li>
@@ -239,11 +230,9 @@
 </ul>
 </li>
 </ul>
-<p>###实现效果</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2190281-a80e155abd020d33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我的效果"></p>
+<h3 id="实现效果-2"><a href="#实现效果-2" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="http://upload-images.jianshu.io/upload_images/2190281-a80e155abd020d33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我的效果"></p>
 <p>实现代码请访问我的<a href="https://github.com/banshengbushu/HTML_BASIC/blob/master/UML-paper.html" target="_blank" rel="noopener">Github</a></p>
-<p>###更多HTML学习资源与工具</p>
-<ul>
+<h3 id="更多HTML学习资源与工具"><a href="#更多HTML学习资源与工具" class="headerlink" title="更多HTML学习资源与工具"></a>更多HTML学习资源与工具</h3><ul>
 <li>html在线验证：<a href="http://www.freeformatter.com/html-validator.html" target="_blank" rel="noopener">http://www.freeformatter.com/html-validator.html</a>(该网站上还有很多别的工具）</li>
 <li>html在线格式化代码：<a href="http://www.cleancss.com/html-beautify/" target="_blank" rel="noopener">http://www.cleancss.com/html-beautify/</a></li>
 <li>W3School上的HTML基础教程：<a href="http://www.w3school.com.cn/html/index.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/html/index.asp</a></li>
@@ -257,13 +246,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/Accessibility 我们能做些什么(下)/" style="float: left;">
-        ← Accessibility 我们能做些什么(下)
+    <a class="pull-left" href="/不能永远忽略的Accessibility (上)/" style="float: left;">
+        ← 不能永远忽略的 Accessibility (上)
     </a>
     
     
-    <a class="pull-right" href="/发现更大的世界/">
-        发现更大的世界 - 知乎2018 →
+    <a class="pull-right" href="/有天，我终于等到了那个人/">
+        有天，我终于等到了那个人 →
     </a>
     
 </nav>
